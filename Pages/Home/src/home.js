@@ -36,17 +36,68 @@ if(volumeSlider){
         audio.volume = this.value;
     });
 }*/
+//for scroll up and down
 let lastScrollTop = 0;
-        const header = document.querySelector('header');
+const header = document.querySelector('header');
 
-        window.addEventListener('scroll', function() {
-            let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-            if (scrollTop > lastScrollTop) {
-                // Scrolling down
-                header.classList.add('hidden');
-            } else {
-                // Scrolling up
-                header.classList.remove('hidden');
-            }
-            lastScrollTop = scrollTop <= 0 ? 0 : scrollTop; // For Mobile or negative scrolling
-        });
+window.addEventListener('scroll', function() {
+  let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+  if (scrollTop > lastScrollTop) {
+    // Scrolling down
+    header.classList.add('hidden');
+  } 
+  else {
+    // Scrolling up
+    header.classList.remove('hidden');
+  }
+  lastScrollTop = scrollTop <= 0 ? 0 : scrollTop; // For Mobile or negative scrolling
+});
+
+//for lang
+async function loadLanguage(lang) {
+  const response = await fetch(`../../../language/${lang}.json`);
+  const data = await response.json();
+  return data;
+}
+
+async function translate(lang, key) {
+  const languageData = await loadLanguage(lang);
+  const keys = key.split('.');
+  let value = languageData;
+  for (let k of keys) {
+      value = value[k];
+      if (value === undefined) {
+          return key; // Return the key if translation is missing
+      }
+  }
+  return value;
+}
+
+async function updateUI(lang) {
+  const translations = {
+      'i18n-haven-title': 'home.haven',
+      'i18n-home': 'home.home',
+      'i18n-about': 'home.about',
+      'i18n-reels': 'home.reels',
+      'i18n-stages': 'home.stages',
+      'i18n-pregnancy': 'home.pregnancy',
+      'i18n-birth': 'home.birth',
+      'i18n-year1': 'home.year1',
+      'i18n-year2-3': 'home.year2-3',
+      'i18n-blog': 'home.blog',
+      'i18n-publications': 'home.publications',
+      'i18n-join': 'home.join'
+  };
+
+  for (const className in translations) {
+      if (translations.hasOwnProperty(className)) {
+          const translationKey = translations[className];
+          const elements = document.querySelectorAll('.' + className);
+          elements.forEach(async element => {
+              element.textContent = await translate(lang, translationKey);
+          });
+      }
+  }
+}
+
+updateUI('en'); // Load English translations
