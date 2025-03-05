@@ -24,12 +24,25 @@ nav a, .pink{
   color: var(--sec-col);
   background-color: var(--prim-backg-col);
 }
+.apink{
+  color: var(--a-col) !important;
+  text-decoration: none;
+}
+.brownpink{
+  color: var(--brownpink) !important;
+}
 nav a {
     font-family: math;
 }
-.carousel-item img {
+#front .carousel-item img {
     height: 70vh;  /* Or a fixed height like 400px */
     object-fit: cover; /* or contain, depending on how you want the image to fit */
+}
+#blog .carousel-item img {
+  height: 40vh;  /* Or a fixed height like 400px */
+  object-fit: cover; /* or contain, depending on how you want the image to fit */
+  width: calc(40vh + 6%);
+  margin-left: 15%;
 }
 .carousel-control-prev-icon,
 .carousel-control-next-icon {
@@ -52,7 +65,9 @@ body section , #about{
   display: flex;
   align-items: center;
 }
-
+.dropdown-item:active {
+  background-color: #f9d2ff;
+}
 .accordion-container {
   background-color: var(--sec-backg-col);
   padding: 20px;
@@ -64,4 +79,28 @@ body section , #about{
 padding: 20px;
 color: white; /* Example text color */
 text-align: left; /* Align text to left */
+}
+
+@media (max-width: 1100px) {
+  #blog .carousel-item img {
+    margin-left: 8%;
+  }
+}
+@media (max-width: 770px) {
+  #blog .carousel-item img {
+    margin-left: 0%;
+  }
+}
+@media (max-width: 550px) {
+  #blog article {
+    display: block;
+    flex-basis: 100% !important;
+    height: 100vh; /* Make the article take up 100% of the viewport height */
+    overflow-y: auto;
+  }
+  #blog .blog-posts{
+    flex-direction: column;
+    margin: auto;
+    padding: 43px;
+  }
 }

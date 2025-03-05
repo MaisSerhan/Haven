@@ -73,7 +73,14 @@ async function translate(lang, key) {
   return value;
 }
 
-async function updateUI(lang) {
+async function updateUI(lang,name) {
+  language = document.getElementById('language');
+  ritleft = document.querySelectorAll('.rit-left');
+  navbar =document.querySelector('.navbar-nav');
+  logo = document.querySelector('.navbar-brand.logo');
+  join = document.querySelector('.i18n-join');
+
+  language.textContent=name;
   const translations = {
       'i18n-haven-title': 'home.haven',
       'i18n-home': 'home.home',
@@ -86,7 +93,26 @@ async function updateUI(lang) {
       'i18n-year2-3': 'home.year2-3',
       'i18n-blog': 'home.blog',
       'i18n-publications': 'home.publications',
-      'i18n-join': 'home.join'
+      'i18n-join': 'home.join',
+      'i18n-learn': 'home.learn',
+      'i18n-inform_Support' : 'home.inform_Support',
+      'i18n-Joyful': 'home.Joyful',
+      'i18n-enter': 'home.enter',
+      'i18n-confSupp': 'home.confSupp',
+      'i18n-mum': 'home.mum',
+      'i18n-child': 'home.child',
+      'i18n-family': 'home.family',
+      'i18n-Community': 'home.Community',
+      'i18n-Forums': 'home.Forums',
+      'i18n-Events': 'home.Events',
+      'i18n-Resources': 'home.Resources',
+      'i18n-Follow': 'home.Follow',
+      'i18n-Support': 'home.Support',
+      'i18n-Status': 'home.Status',
+      'i18n-Privacy': 'home.Privacy',
+      'i18n-Terms': 'home.Terms',
+      'i18n-Contact': 'home.Contact',
+      'i18n-H2025' : 'home.H2025'
   };
 
   for (const className in translations) {
@@ -98,6 +124,23 @@ async function updateUI(lang) {
           });
       }
   }
+  console.log(ritleft)
+  ritleft.forEach(async element => {
+    if(lang =='ar'){
+      element.style.flexDirection = 'row-reverse';
+      navbar.classList.add('fs-5');
+    }
+    else if(lang =='en'){
+      element.style.flexDirection = 'row';
+      navbar.style.fontSize = '1.2rem';
+      console.log( navbar.style.fontSize)
+      navbar.classList.remove('fs-5');
+      logo.classList.add('fs-3');
+      logo.classList.remove('fs-2');
+    }
+  });
+
 }
 
-updateUI('en'); // Load English translations
+updateUI('ar','العربية'); // Load English translations
+//for
