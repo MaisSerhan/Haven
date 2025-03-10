@@ -45,6 +45,7 @@ nav a, .pink{
 }
 /* القائمة المنسدلة */
 .auth-dropdown {
+  position: relative;
   color: white;
   cursor: pointer;
   font-weight: bold;
@@ -54,9 +55,9 @@ nav a, .pink{
 
 .auth-dropdown-content {
   display: none;
+  left: 7px;
   position: absolute;
-  top: 72px;
-  right: 9.5%;
+  top: 56px;
   background-color: #fe366d;
   border-radius: 10px;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
