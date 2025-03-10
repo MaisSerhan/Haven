@@ -15,6 +15,10 @@ body {
     background-color: var(--background);
 }
 
+.mx-auto {
+    margin-left: 42% !important;
+}
+
 /* تصميم الحاوية */
 .container {
     background: linear-gradient(to bottom right, #ff7e5f, #ff3f7e);
