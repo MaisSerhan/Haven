@@ -29,7 +29,7 @@
     <header>
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <div class="container">
-                <a class="navbar-brand logo fs-2" href="#">
+                <a class="navbar-brand fs-2" href="#">
                     <img src="./Assets/images/HalfTranLogo.png" alt="Haven Logo" class="logo" width="50px">
                     <span class="i18n-haven-title"></span>
                 </a>
@@ -71,8 +71,12 @@
                                 <li><a class="dropdown-item" href="#" onclick="updateUI('en','English')">English</a></li>
                             </ul>
                         </li>
-                        <li class="nav-item">
+                        <li class="nav-item auth-dropdown">
                             <a class="nav-link" href="#home"><button type="button" class="btn btn-outline-danger fs-5 i18n-join"></button></a>
+                            <div class="auth-dropdown-content">
+                                <a href="./Pages/Login_Signup/login.html">login</a>
+                                <a href="./Pages/Login_Signup/signup.html">sign up</a>
+                            </div>
                         </li>
                     </ul>
                 </div>
