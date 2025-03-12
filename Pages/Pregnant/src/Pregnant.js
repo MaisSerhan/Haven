@@ -1,52 +1,24 @@
-/*// Get audio element
-const audio = new Audio('https://youtu.be/D4VpVRtbx7w?si=_zwIcqGRIBJWynVd'); // Replace with your audio link
+// Function to load the HTML content from an external file into a container
+function loadHTML(url, containerId) {
+  fetch(url)
+      .then(response => response.text())
+      .then(data => {
+          document.getElementById(containerId).innerHTML = data;
+          updateUI('ar', 'العربية'); // Load English translations
+      })
+      .catch(error => console.error('Error loading the HTML file:', error));
+}
 
-// Get buttons
-const playButton = document.getElementById('playButton');
-const pauseButton = document.getElementById('pauseButton');
-const stopButton = document.getElementById('stopButton');
-
-// Play audio
-playButton.addEventListener('click', function() {
-  audio.play();
+document.addEventListener('DOMContentLoaded', function() {
+  loadHTML('../../Assets/Html/navbar.html', 'navbar-container');
+  loadHTML('../../Assets/Html/footer.html', 'footer-container');
+  
 });
 
-// Pause audio
-pauseButton.addEventListener('click', function() {
-  audio.pause();
-});
-
-// Stop audio (reset to beginning)
-stopButton.addEventListener('click', function() {
-  audio.pause();
-  audio.currentTime = 0; // Reset playback to the beginning
-});
-
-//Optional: Audio ended event.
-audio.addEventListener('ended', function(){
-    console.log("Audio Ended");
-    //Optional actions after audio ends.
-});
-
-//Optional: Adding volume control.
-const volumeSlider = document.getElementById("volumeSlider");
-
-if(volumeSlider){
-    volumeSlider.addEventListener("input", function(){
-        audio.volume = this.value;
-    });
-}*/
-let lastScrollTop = 0;
-        const header = document.querySelector('header');
-
-        window.addEventListener('scroll', function() {
-            let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-            if (scrollTop > lastScrollTop) {
-                // Scrolling down
-                header.classList.add('hidden');
-            } else {
-                // Scrolling up
-                header.classList.remove('hidden');
-            }
-            lastScrollTop = scrollTop <= 0 ? 0 : scrollTop; // For Mobile or negative scrolling
-        });
+ 
+function srcnav(){
+  console.log(document.querySelector('img.logo').src)
+  document.querySelector('img.logo').src="../../Assets/images/HalfTranLogo.png";
+  document.querySelector('#nav-login').href="../Login_Signup/login.html" ;
+  document.querySelector('#nav-signup').href="../Login_Signup/signup.html" ;
+}
