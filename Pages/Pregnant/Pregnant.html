@@ -21,6 +21,52 @@
     <!-- رابط للحصول على التصميم   للصفحة الرئيسية -->
     <link rel="stylesheet" href="./src/Pregnant.css">
     <link rel="shortcut icon" href="https://haven-peach.vercel.app/Assets/images/HalfTranLogo.png">
+      <style>.pregnancy-stages {
+        margin-left: 45vh !important;
+        padding: 20px;
+        background-color: #fff3f8; /* لون خلفية متناسق مع الصفحة */
+        border-radius: 12px;
+        width: 90%;
+        max-width: 4000px;
+        text-align: center;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    }
+    
+    .pregnancy-stages h2 {
+        color: #630565; /* لون متناسق مع الصفحة */
+        font-family: 'Satisfy', cursive;
+        font-size: 28px;
+        margin-bottom: 15px;
+    }
+    
+    .stages-buttons {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+    
+    .stages-buttons a {
+        display: inline-block;
+        background-color: #FF0057;
+        color: white;
+        padding: 12px 20px;
+        border-radius: 8px;
+        text-decoration: none;
+        font-size: 16px;
+        font-weight: 500;
+        transition: 0.3s ease-in-out;
+        border: none;
+        cursor: pointer;
+        font-family: 'Roboto', sans-serif;
+        box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.1);
+    }
+    
+    .stages-buttons a:hover {
+        background-color: #d9044f;
+        transform: scale(1.1);
+    }
+    </style>
     <title>Haven</title>
 </head>
 <body>
@@ -135,48 +181,26 @@
                   </button>
             </div>
         </section>
-        <!--about-->
         <section id="about" class="container my-5">
             <div class="full-bg">
                 <div class="container">
                     <div class="row">
                         <div class="col-md-6 left-content pink bgpink">
-                            <h1>Your Title Here</h1>
-                            <p>
-                                This is some descriptive text that goes above the accordion. You can add more detailed information here.
-                                You can add more lines of text.
-                            </p>
-                            <div class="accordion-container bgpink">
-                                <div class="accordion accordion-flush" id="accordionFlushExample">
-                                    <div class="accordion-item">
-                                        <h2 class="accordion-header">
-                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
-                                                Accordion Item #1
-                                            </button>
-                                        </h2>
-                                        <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
-                                            <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the first item's accordion body.</div>
-                                        </div>
-                                    </div>
-                                    <div class="accordion-item">
-                                        <h2 class="accordion-header">
-                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
-                                                Accordion Item #2
-                                            </button>
-                                        </h2>
-                                        <div id="flush-collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
-                                            <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the second item's accordion body. Let's imagine this being filled with some actual content.</div>
-                                        </div>
-                                    </div>
-                                    <div class="accordion-item">
-                                        <h2 class="accordion-header">
-                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
-                                                Accordion Item #3
-                                            </button>
-                                        </h2>
-                                        <div id="flush-collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
-                                            <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the third item's accordion body. Nothing more exciting happening here in terms of content, but just filling up the space to make it look, at least at first glance, a bit more representative of how this would look in a real-world application.</div>
-                                        </div>
+                            <section class="pregnancy-stages">
+                                <h2>🌸 مراحل الحمل</h2>
+                                <div class="stages-buttons">
+                                    <a href="#stage1">الشهر الأول</a>
+                                    <a href="#stage2">الشهر الثاني</a>
+                                    <a href="#stage3">الشهر الثالث</a>
+                                    <a href="#stage4">الشهر الرابع</a>
+                                    <a href="#stage5">الشهر الخامس</a>
+                                    <a href="#stage6">الشهر السادس</a>
+                                    <a href="#stage7">الشهر السابع</a>
+                                    <a href="#stage8">الشهر الثامن</a>
+                                    <a href="#stage9">الشهر التاسع</a>
+                                </div>
+                            </section>
+
                                     </div>
                                 </div>
                             </div>
