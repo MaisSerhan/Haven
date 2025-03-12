@@ -27,61 +27,7 @@
 </head>
 <body>
     <header>
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <div class="container">
-                <a class="navbar-brand fs-2" href="#">
-                    <img src="./Assets/images/HalfTranLogo.png" alt="Haven Logo" class="logo" width="50px">
-                    <span class="i18n-haven-title"></span>
-                </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"> </span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNav" style="color:#FF0057">
-                    <ul class="navbar-nav ms-auto fs-5">
-                        <li class="nav-item me-lg-4">
-                            <a class="nav-link i18n-home" href="#home"></a>
-                        </li>
-                        <li class="nav-item me-lg-4">
-                            <a class="nav-link i18n-about" href="#about"></a>
-                        </li>
-                        <li class="nav-item me-lg-4">
-                            <a class="nav-link i18n-reels" href="#reels"></a>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle i18n-stages" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"></a>
-                            <ul class="dropdown-menu">
-                                <li><a class="dropdown-item i18n-pregnancy" href="https://haven-peach.vercel.app/Pages/Pregnant/Pregnant.html"></a></li>
-                                <li><a class="dropdown-item i18n-birth" href="#"></a></li>
-                                <li><a class="dropdown-item i18n-year1" href="#"></a></li>
-                                <li><a class="dropdown-item i18n-year2-3" href="#"></a></li>
-                            </ul>
-                        </li>
-                        <li class="nav-item mx-lg-4">
-                            <a class="nav-link i18n-publications" href="#publications"></a>
-                        </li>
-                        <li class="nav-item me-lg-4">
-                            <a class="nav-link i18n-blog" href="#blog"></a>
-                        </li>
-                    </ul>
-                    <ul class="navbar-nav ms-auto fs-4">
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle fs-6 mt-2" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" id="language">العربية</a>
-                            <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="#" onclick="updateUI('ar','العربية')">العربية</a></li>
-                                <li><a class="dropdown-item" href="#" onclick="updateUI('en','English')">English</a></li>
-                            </ul>
-                        </li>
-                        <li class="nav-item auth-dropdown">
-                            <a class="nav-link" href="#home"><button type="button" class="btn btn-outline-danger fs-5 i18n-join"></button></a>
-                            <div class="auth-dropdown-content">
-                                <a href="./Pages/Login_Signup/login.html">login</a>
-                                <a href="./Pages/Login_Signup/signup.html">sign up</a>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
+        <div id="navbar-container"></div>
     </header>
     <main>
         <!--front part for stages-->
@@ -280,48 +226,8 @@
             </div>
         </section>
     </main>
-    <footer class="bg-white py-5">
-        <div class="container">
-            <p class="pink  text-center i18n-confSupp"></p>
-            <div class="row  text-center">
-                <div class="col-md-4 mb-3">
-                    <h5 class="pink">Haven</h5>
-                    <ul class="list-unstyled">
-                        <li><a href="/forums" class="apink i18n-mum"></a></li>
-                        <li><a href="/events" class="apink i18n-child"></a></li>
-                        <li><a href="/resources" class="apink i18n-family"></a></li>
-                    </ul>
-                </div>
-                <div class="col-md-4 mb-3">
-                    <h5 class="pink i18n-Community"></h5>
-                    <ul class="list-unstyled">
-                        <li><a href="/forums" class="apink i18n-Forums"></a></li>
-                        <li><a href="/events" class="apink i18n-Events"></a></li>
-                        <li><a href="/resources" class="apink i18n-Resources"></a></li>
-                    </ul>
-                </div>
-                <div class="col-md-4">
-                    <h5 class="pink i18n-Follow"></h5>
-                    <li class="apink list-unstyled i18n-Support"></li>
-                    <li class="apink list-unstyled i18n-Status"></li>
-                    <ul class="list-inline mt-2">
-                        <li class="list-inline-item"><a href="#"><i class="fa-brands fa-facebook"></i></a></li>
-                        <li class="list-inline-item"><a href="#"><i class="fa-brands fa-x-twitter" style="color: #0f1d27;"></i></a></li>
-                        <li class="list-inline-item"><a href="#"><i class="fa-brands fa-instagram" style="color: #be2c90;"></i></a></li>
-                    </ul>
-                </div>
-            </div>
-            <hr>
-            <div class="container text-center brownpink">
-                <p >&copy; <span class="i18n-H2025"></span></p>
-                <ul class="list-inline brownpink">
-                    <li class="list-inline-item"><a href="/privacy" class="text-muted brownpink i18n-Privacy"></a></li>
-                    <li class="list-inline-item"><a href="/terms" class="text-muted brownpink i18n-Terms"></a></li>
-                    <li class="list-inline-item"><a href="/contact" class="text-muted brownpink i18n-Contact"></a></li>
-                </ul>
-            </div>
-        </div>
-    </footer>
+    <div id="footer-container"></div>
     <script src="./Pages/Home/src/home.js"></script>
+    <script src="./Assets/scripts/main.js"></script>
 </body>
 </html>
