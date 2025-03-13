@@ -14,11 +14,3 @@ document.addEventListener('DOMContentLoaded', function() {
   loadHTML('../../Assets/Html/footer.html', 'footer-container');
   
 });
-
- 
-function srcnav(){
-  console.log(document.querySelector('img.logo').src)
-  document.querySelector('img.logo').src="../../Assets/images/HalfTranLogo.png";
-  document.querySelector('#nav-login').href="../Login_Signup/login.html" ;
-  document.querySelector('#nav-signup').href="../Login_Signup/signup.html" ;
-}
