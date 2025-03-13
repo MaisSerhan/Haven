@@ -14,5 +14,4 @@ document.addEventListener('DOMContentLoaded', function() {
   loadHTML('../../Assets/Html/footer.html', 'footer-container');
   
 });
-function srcnav(){
-}
+
