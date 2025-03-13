@@ -42,7 +42,6 @@ async function updateUI(lang, name) {
   const logo = document.querySelector('.navbar-brand.logo');
   const join = document.querySelector('.i18n-join');
  
-  srcnav();
   language.textContent = name;
   const translations = {
       'i18n-haven-title': 'home.haven',
