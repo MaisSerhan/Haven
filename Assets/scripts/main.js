@@ -85,7 +85,7 @@ async function updateUI(lang, name) {
       'i18n-Contact': 'home.Contact',
       'i18n-H2025': 'home.H2025'
   };
-
+  updatePost(lang, name)
   for (const className in translations) {
       if (translations.hasOwnProperty(className)) {
           const translationKey = translations[className];
