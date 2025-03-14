@@ -50,8 +50,6 @@ async function updateUI(lang, name) {
   const language = document.getElementById('language');
   const ritleft = document.querySelectorAll('.rit-left');
   const navbar = document.querySelector('.navbar-nav');
-  const logo = document.querySelector('.navbar-brand.logo');
-  const join = document.querySelector('.i18n-join');
  
   language.textContent = name;
   const translations = {
@@ -106,8 +104,6 @@ async function updateUI(lang, name) {
           element.style.flexDirection = 'row';
           navbar.classList.remove('fs-5');
           navbar.style.fontSize = '1.2rem';
-          logo.classList.add('fs-3');
-          logo.classList.remove('fs-2');
       }
   });
 }
