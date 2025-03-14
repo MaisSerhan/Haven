@@ -5,6 +5,7 @@ function loadHTML(url, containerId) {
       .then(data => {
           document.getElementById(containerId).innerHTML = data;
           updateUI('ar', 'العربية'); // Load English translations
+          updatePost('ar', 'العربية');
       })
       .catch(error => console.error('Error loading the HTML file:', error));
 }
