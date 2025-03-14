@@ -48,6 +48,15 @@ async function updatePost(lang, name) {
       'i18n-a-post3': 'Post.a-post3',
       'i18n-p-post3': 'Post.p-post3',
       'i18n-d-post3': 'Post.d-post3',
+      'i18n-a-post4': 'Post.a-post4',
+      'i18n-p-post4': 'Post.p-post4',
+      'i18n-d-post4': 'Post.d-post4',
+      'i18n-a-post5': 'Post.a-post5',
+      'i18n-p-post5': 'Post.p-post5',
+      'i18n-d-post5': 'Post.d-post5',
+      'i18n-a-post6': 'Post.a-post6',
+      'i18n-p-post6': 'Post.p-post6',
+      'i18n-d-post6': 'Post.d-post6'
   };
 
   for (const className in translations) {
