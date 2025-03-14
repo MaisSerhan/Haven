@@ -89,10 +89,10 @@ nav a {
     object-fit: cover; /* or contain, depending on how you want the image to fit */
 }
 #blog .carousel-item img {
-  height: 40vh;  /* Or a fixed height like 400px */
+  height: 248px;  /* Or a fixed height like 400px */
   object-fit: cover; /* or contain, depending on how you want the image to fit */
-  width: calc(40vh + 6%);
-  margin-left: 15%;
+  width: 66%;
+  margin-left: 22%;
 }
 .carousel-control-prev-icon,
 .carousel-control-next-icon {
@@ -131,6 +131,9 @@ color: white; /* Example text color */
 text-align: left; /* Align text to left */
 }
 
+article{
+  padding-top: 30px;
+}
 /* Animation اللوجو */
 @keyframes bounceGlow {
   0%, 100% {
