@@ -10,7 +10,7 @@ function loadHTML(url, containerId, callback) {
 }
 
 document.addEventListener('DOMContentLoaded', function() {
-  let savedLang = localStorage.getItem('selectedLang') || 'en'; // Default to English
+  let savedLang = localStorage.getItem('selectedLang') || 'ar'; // Default to Arabic
   let langName = savedLang === 'ar' ? 'العربية' : 'English';
 
   loadHTML('../../Assets/Html/navbar.html', 'navbar-container', () => {
