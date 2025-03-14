@@ -58,7 +58,6 @@ async function updatePost(lang, name) {
     about.classList.remove("text-start");
     about.classList.add("text-end");
     about.dir="rtl";
-    text-end
   } else if (lang === 'en') {
     about.classList.remove("text-end");
     about.classList.add("text-start");
