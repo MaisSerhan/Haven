@@ -1,3 +1,15 @@
+// Function to load the HTML content from an external file into a container
+function loadHTML(url, containerId) {
+  fetch(url)
+      .then(response => response.text())
+      .then(data => {
+          document.getElementById(containerId).innerHTML = data;
+          updateUI('ar', 'العربية'); // Load English translations
+          updatePost('ar', 'العربية'); // Load English translations
+      })
+      .catch(error => console.error('Error loading the HTML file:', error));
+}
+
 //for scroll up and down
 let lastScrollTop = 0;
 const header = document.querySelector('header');
