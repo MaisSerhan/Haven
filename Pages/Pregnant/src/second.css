@@ -1,0 +1,262 @@
+/* إعدادات عامة للصفحة */
+body {
+    background: linear-gradient(to bottom, #ffdde1, #ee9ca7);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    font-family: "Tajawal", sans-serif;
+}
+
+/* جعل الصورة تمتد بعرض الشاشة */
+.image-container {
+    width: 100vw;
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.full-width-image {
+    width: 100vw;
+    height: auto;
+    max-height: 90vh;
+    object-fit: cover;
+}
+
+/* تنسيق القسم الجديد */
+.info-container {
+    width: 90%;
+    max-width: 800px;
+    background: white;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 15px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+    text-align: right;
+    direction: rtl;
+}
+
+.info-container h2 {
+    color: #630565;
+    font-size: 24px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.info-container ul {
+    list-style: none;
+    padding: 0;
+}
+
+.info-container li {
+    background: #ffe4ec;
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.1);
+    font-size: 18px;
+}
+
+/* تنسيق الحاوية التي تحتوي على الجدولين */
+.tables-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+}
+
+.info-container {
+    flex: 1;
+    min-width: 350px;
+}
+
+.back-button-container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.back-button {
+    display: inline-block;
+    background-color: #d63384;
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    font-size: 18px;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+}
+
+.back-button:hover {
+    background-color: #a61e66;
+}
+
+/* تنسيق حاوية الجدول */
+.routine-container {
+    width: 90%;
+    max-width: 800px;
+    background: white;
+    padding: 20px;
+    margin-top: -30px;
+    border-radius: 15px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+/* عنوان الجدول */
+.routine-container h2 {
+    color: #630565;
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+/* تنسيق الجدول */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 16px;
+    margin-top: auto;
+}
+
+/* تنسيق رأس الجدول */
+thead {
+    background: #FF0057;
+    color: white;
+    font-weight: bold;
+}
+
+thead th {
+    padding: 12px;
+    text-align: center;
+}
+
+/* تنسيق الصفوف */
+tbody tr {
+    border-bottom: 1px solid #ddd;
+    transition: background 0.3s;
+}
+
+tbody tr:hover {
+    background: #ffe4ec;
+}
+
+/* تنسيق الخلايا */
+td {
+    padding: 10px;
+    text-align: center;
+}
+
+/* تحسين الجدول على الشاشات الصغيرة */
+@media (max-width: 600px) {
+    .routine-container {
+        width: 95%;
+        padding: 15px;
+    }
+
+    table {
+        font-size: 14px;
+    }
+
+    td, th {
+        padding: 8px;
+    }
+}
+
+/* تنسيق الفيديو */
+.video-container {
+    width: 90%;
+    max-width: 800px;
+    background: white;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 15px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+.video-container h2 {
+    color: #630565;
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+/* جعل الفيديو متجاوبًا */
+.video-container iframe {
+    width: 100%;
+    height: 350px;
+    border-radius: 10px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* تحسين الفيديو على الشاشات الصغيرة */
+@media (max-width: 600px) {
+    .video-container iframe {
+        height: 250px;
+    }
+}
+
+/* تنسيق القوائم الجانبية */
+.sidebar {
+    position: fixed;
+    top: 0;
+    width: 250px;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.9);
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    direction: rtl;
+}
+
+.left-sidebar {
+    left: 0;
+}
+
+.right-sidebar {
+    right: 0;
+}
+
+.sidebar h3 {
+    color: #630565;
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    background: #ffe4ec;
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.1);
+    font-size: 18px;
+    text-align: center;
+}
+
+.sidebar ul li a {
+    text-decoration: none;
+    color: #630565;
+    font-weight: bold;
+}
+
+.sidebar ul li:hover {
+    background: #ffb6c1;
+}
+
+/* تحسين التخطيط عند الشاشات الصغيرة */
+@media (max-width: 900px) {
+    .sidebar {
+        display: none;
+    }
+
+    .tables-container, .routine-container, .video-container {
+        width: 100%;
+        padding: 15px;
+    }
+}
