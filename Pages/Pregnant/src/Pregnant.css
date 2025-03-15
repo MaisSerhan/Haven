@@ -79,7 +79,6 @@ body section , #about{
   transform: scale(1.1);
 }
 .pregnancy-stages {
-  margin-left: 40vh !important;
   padding: 20px;
   background-color: #fff3f8; /* لون خلفية متناسق مع الصفحة */
   border-radius: 12px;
@@ -105,12 +104,10 @@ body section , #about{
   margin-top: 20px; /* Add margin to separate from title */
 }
 
-.left-content {
-padding: 20px;
-color: white; /* Example text color */
-text-align: left; /* Align text to left */
-}
+.left-content {padding: 166px 290px;color: white; /* Example text color */text-align: left; /* Align text to left */width: 70vh;}
 .pregnancy-stages {
+    width: 69vh;
+    margin: 0px 0px;
     background-color: #fff;
     padding: 20px;
     border-radius: 10px;
@@ -139,4 +136,36 @@ text-align: left; /* Align text to left */
     background-color: #e6004c;
 }
 
-
+.full-bg {
+    background-image: url(https://navyhealth.com.au/wp-content/uploads/2021/05/NAV21481-May-Blog-WEB_DE1.13.png);
+}
+@media (max-width: 750px) {
+    .pregnancy-stages {
+        width: 58vh;
+    }
+    .left-content {
+        padding: 166px 46%;
+    }
+}
+@media (max-width: 500px) {
+    .pregnancy-stages {
+        width: 44vh;
+    }
+    .left-content {
+        padding: 225px 20%;
+        color: white;
+        text-align: left;
+        width: 51vh;
+    }
+}
+@media (max-width: 320px) {
+    .pregnancy-stages {
+        width: 26vh;
+    }
+   .left-content {
+    padding: 346px 20%;
+    color: white;
+    text-align: left;
+    width: 51vh;
+    } 
+}
