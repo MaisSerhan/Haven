@@ -136,8 +136,53 @@ body section , #about{
     background-color: #e6004c;
 }
 
+
+
 .full-bg {
     background-image: url(https://navyhealth.com.au/wp-content/uploads/2021/05/NAV21481-May-Blog-WEB_DE1.13.png);
+}
+#about {
+  margin-bottom: 16vh !important;
+}
+.circle {
+  width: 150px; /* Adjust size as needed */
+  height: 130px; /* Adjust size as needed */
+  border-radius: 50%; /* Makes it a circle */
+  background: linear-gradient(#ec3572, #b0b2c5);
+  margin: 10px; /* Spacing between circles */
+  display: inline-block; /* Aligns them horizontally */
+  padding-top: 20px;
+  color: white !important;
+  text-decoration: none;
+}
+
+.circle:hover {   
+   background: linear-gradient(#E91E63, #c5b0b1) !important;
+   animation: move 3s infinite ease-in-out;
+}
+
+/*Optional, to center circles horizontally*/
+.centered-circles {
+text-align: center;
+}
+
+.list-group-item{
+  background-color: #fff0f8;
+}
+.back-mother{
+  box-shadow: inset 0 0 10px rgba(255, 63, 126, 0.5);
+  background: linear-gradient(#ffdbe7, #d18e91) !important;
+
+}
+@keyframes move {
+  0%, 100% {
+      transform: translateY(0);
+      padding: 0px;
+  }
+  50% {
+      transform: translateY(-8px);
+      padding: 30px;
+  }
 }
 @media (max-width: 750px) {
     .pregnancy-stages {
