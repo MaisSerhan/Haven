@@ -28,7 +28,7 @@
         <div id="navbar-container"></div>
     </header>
     <main>
- <!-- قسم الصورة والعنوان -->
+    <!-- قسم الصورة والعنوان -->
         <section id="front">
             <div id="carouselExampleIndicators" class="carousel slide my-4 container">
                 <div class="carousel-indicators">
@@ -72,7 +72,7 @@
         </section>
         
         <!-- محتويات الصفحة -->
-        <section class="content-container">
+        <section class="content-container" id="posts">
             <!-- التحضير للولادة -->
             <div class="content-box">
                 <h3>✨ التحضير للولادة</h3>
@@ -87,7 +87,6 @@
                 <a href="https://www.medicoverhospitals.in/ar/articles/tips-to-have-a-normal-delivery" class="btn btn-custom">اقرئي المزيد</a>
                 <a href="hospital-bag.html" class="btn btn-outline-pink mt-3">🎒 تحضير حقيبة الولادة</a>
             </div>
-
             <!-- مراحل الولادة -->
             <div class="content-box">
                 <h3>🌀 مراحل الولادة</h3>
@@ -99,7 +98,6 @@
                 </ul>
                 <a href="https://almoosahealthgroup.org/ar/article/%D8%B9%D9%84%D8%A7%D9%85%D8%A7%D8%AA-%D8%A7%D9%84%D9%88%D9%84%D8%A7%D8%AF%D8%A9-%D8%A7%D9%84%D8%B7%D8%A8%D9%8A%D8%B9%D9%8A%D8%A9/" class="btn btn-custom">اقرئي المزيد</a>
             </div>
-
             <!-- نصائح للولادة -->
             <div class="content-box">
                 <h3>🌼 نصائح ذهبية للولادة</h3>
@@ -111,10 +109,8 @@
                     <li>اطلبي المساعدة من طبيبك أو ممرضة التخدير لو كنتِ بحاجة لمساعدة لتخفيف الألم.</li>
                     <li>تعرفي على طريقة "مخطط الولادة" لمساعدتك على اختيار الخيارات التي تريدينها أثناء الولادة.</li>
                 </ul>
-            
                 <a href="https://www.masrawy.com/howa_w_hya/health/details/2025/3/14/2744126/5-%D9%86%D8%B5%D8%A7%D8%A6%D8%AD-%D8%B0%D9%87%D8%A8%D9%8A%D8%A9-%D9%84%D8%AA%D8%B3%D9%87%D9%8A%D9%84-%D8%A7%D9%84%D9%88%D9%84%D8%A7%D8%AF%D8%A9-%D9%88%D8%AC%D8%B9%D9%84%D9%87%D8%A7-%D8%A3%D9%83%D8%AB%D8%B1-%D9%8A%D8%B3%D8%B1%D8%A7-%D8%A7%D8%B9%D8%B1%D9%81%D9%8A%D9%87%D8%A7#shortenurl" class="btn btn-custom">اقرئي المزيد</a>
             </div>
-
             <!-- نصائح التغذية بعد الولادة -->
             <div class="content-box">
                 <h3>🍓 نصائح ذهبية للتغذية بعد الولادة</h3>
@@ -128,26 +124,206 @@
                 </ul>
             </div>
         </section>
+        <!--انواع الولادة-->
+        <section id="birhtType">
+            <div class="card text-center container">
+                <div class="card-header">
+                    <ul class="nav nav-tabs card-header-tabs" id="birthTabs">
+                        <li class="nav-item">
+                            <a class="nav-link active pink" data-bs-toggle="tab" href="#natural-birth">الولادة الطبيعية</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link pink" data-bs-toggle="tab" href="#c-section">الولادة القيصرية</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link pink" data-bs-toggle="tab" href="#water-birth">الولادة المائية</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link pink" data-bs-toggle="tab" href="#back-birth">ابرة الظهر</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="card-body">
+                    <div class="tab-content">
+                        <div class="tab-pane fade show active" id="natural-birth">
+                            <div class="clearfix">
+                                <div class="row">
+                                    <p class="lead text-center col-lg-8 col-sm-12">الولادة الطبيعية هي العملية التي يحدث فيها خروج الطفل من رحم الأم عبر قناة الولادة بدون أي تدخل جراحي، حيث يتم ذلك بشكل طبيعي خلال المخاض.</p>
+                                    <img class="col-3 text-center" width="50px" src="https://imagecdn.med.ovh/unsafe/0x0/filters:format(webp):quality(80):blur(0)/https://www.med.tn/uploads/blogs/GROSSESSE/Grossesse%202/1200x628%20%D8%A7%D9%84%D9%88%D9%84%D8%A7%D8%AF%D8%A9%20%D8%A7%D9%84%D8%B7%D8%A8%D9%8A%D8%B9%D9%8A%D8%A9%20%D9%88%D8%A7%D9%84%D9%82%D9%8A%D8%B5%D8%B1%D9%8A%D8%A9%20%D9%88%D8%AE%D8%B5%D9%88%D8%B5%D9%8A%D8%A9%20%D9%83%D9%84%20%D9%85%D9%86%D9%87%D8%A7.jpg">
+                                </div>
+                                <h2>أسباب اختيار الولادة الطبيعية</h2>
+                                <ul class="list-group">
+                                    <li class="list-group-item">الرغبة في تجربة الولادة بشكل طبيعي.</li>
+                                    <li class="list-group-item">قليل من المخاطر الصحية بالنسبة للأم والطفل.</li>
+                                    <li class="list-group-item">أقصى استعادة بعد الولادة.</li>
+                                    <li class="list-group-item">التقليل من مدة الإقامة في المستشفى.</li>
+                                    <li class="list-group-item">تجربة الولادة الفريدة.</li>
+                                </ul>
+                                <h2>مراحل الولادة الطبيعية</h2>
+                                <ol class="list-group">
+                                    <li class="list-group-item">المرحلة الأولى: التقلصات.</li>
+                                    <li class="list-group-item">المرحلة الثانية: خروج الطفل.</li>
+                                    <li class="list-group-item">المرحلة الثالثة: خروج المشيمة.</li>
+                                </ol>
+                                <h2>فوائد ومخاطر الولادة الطبيعية</h2>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <h3>فوائد</h3>
+                                        <ul class="list-group">
+                                            <li class="list-group-item">تعزيز الروابط بين الأم والطفل.</li>
+                                            <li class="list-group-item">التقليل من الألم بعد الولادة.</li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <h3>مخاطر</h3>
+                                        <ul class="list-group">
+                                            <li class="list-group-item">قد تواجه بعض الأمهات صعوبات أثناء المخاض.</li>
+                                            <li class="list-group-item">احتمالية تمزق الأنسجة أو نزيف.</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="c-section">
+                            <div class="clearfix">
+                                <div class="row">
+                                    <p class="lead text-center col-lg-8 col-sm-12">إجراء جراحي يتم فيه ولادة الطفل عن طريق إجراء شقوق في بطن الأم و الرحم.</p>
+                                    <img class="col-3 text-center" width="50px" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQW3WzBg3nzWGXvqaFu6fS4G_Q_ARNyrzRrCQ&s">
+                                </div>
+                                <h2>أسباب الولادة القيصرية</h2>
+                                <ul class="list-group">
+                                    <li class="list-group-item">عدم تقدم المخاض.</li>
+                                    <li class="list-group-item">وجود مضاعفات صحية.</li>
+                                    <li class="list-group-item">تعدد الأجنة.</li>
+                                    <li class="list-group-item">موقع الطفل الغير مناسب.</li>
+                                    <li class="list-group-item">مشكلات في المشيمة.</li>
+                                </ul>
+                                <h2>مراحل الولادة القيصرية</h2>
+                                <ol class="list-group">
+                                    <li class="list-group-item">التحضير.</li>
+                                    <li class="list-group-item">إجراء العملية.</li>
+                                    <li class="list-group-item">التعافي.</li>
+                                </ol>
+                                <h2>فوائد ومخاطر الولادة القيصرية</h2>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                    <h3>فوائد</h3>
+                                    <ul class="list-group">
+                                        <li class="list-group-item">تقليل المخاطر أثناء الولادة.</li>
+                                        <li class="list-group-item">تحديد موعد العملية.</li>
+                                    </ul>
+                                    </div>
+                                    <div class="col-md-6">
+                                <h3>مخاطر</h3>
+                                  <ul class="list-group">
+                                    <li class="list-group-item">التعافي الأطول.</li>
+                                    <li class="list-group-item">المضاعفات الجراحية.</li>
+                                  </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="water-birth">
+                            <div class="clearfix">
+                                <div class="row">
+                                    <p class="lead text-center col-lg-8 col-sm-12">الولادة المائية هي طريقة للولادة تتم في حوض مائي، حيث يُمكن للأم الاسترخاء في الماء الدافئ أثناء المخاض وخلال عملية الولادة، مما يساعد على تخفيف الألم ويساهم في تجربة ولادة أكثر راحة.</p>
+                                    <img class="col-3 text-center" width="50px" src="https://www.hmsmirdifhospital.ae/cdn/images/banner/1000/water-birth-deliveries-in-dubai-1657115260.jpg.jpg.webp">
+                                </div>
+                                <h2>أسباب اختيار الولادة المائية</h2>
+                                <ul class="list-group">
+                                    <li class="list-group-item">تقليل الألم والتوتر أثناء المخاض.</li>
+                                    <li class="list-group-item">توفير بيئة مريحة وآمنة.</li>
+                                    <li class="list-group-item">تسريع عملية المخاض.</li>
+                                    <li class="list-group-item">تسهيل انتقال الطفل إلى العالم الخارجي.</li>
+                                    <li class="list-group-item">تعزيز الاتصال بين الأم وطفلها.</li>
+                                </ul>
+                                <h2>مراحل الولادة المائية</h2>
+                                <ol class="list-group">
+                                    <li class="list-group-item">المرحلة الأولى: التقلصات، حيث يتم استخدام المياه للتخفيف من الشعور بالألم.</li>
+                                    <li class="list-group-item">المرحلة الثانية: الدفع، حيث يمكن للأم الدفع ضمن الماء، مما قد يسهل الولادة.</li>
+                                    <li class="list-group-item">المرحلة الثالثة: خروج المشيمة، عملية قد تتم أيضًا في الماء.</li>
+                                </ol>
+                                <h2>فوائد ومخاطر الولادة المائية</h2>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <h3>فوائد</h3>
+                                        <ul class="list-group">
+                                            <li class="list-group-item">تخفيف آلام الولادة.</li>
+                                            <li class="list-group-item">توفير بيئة هادئة ومريحة.</li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <h3>مخاطر</h3>
+                                        <ul class="list-group">
+                                            <li class="list-group-item">احتمالية تعرض الطفل لعدوى.</li>
+                                            <li class="list-group-item">قد لا يناسب بعض حالات الحمل.</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="back-birth">
+                            <div class="clearfix">
+                                <div class="row">
+                                    <p class="lead text-center col-lg-8 col-sm-12">إبرة الظهر، أو التخدير فوق الجافية، هي إجراء طبي يُستخدم بشكل شائع لتخفيف الألم أثناء المخاض والولادة. يتم حقن مخدر موضعي في الفضاء فوق الجافية حول الحبل الشوكي، مما يساعد على جعل تجربة الولادة أكثر راحة.</p>
+                                    <img class="col-3 text-center" width="50px" src="https://f-h.com.sa/wp-content/uploads/2018/11/001.jpg">
+                                </div>
+                                <h2>أسباب اختيار إبرة الظهر</h2>
+                                <ul class="list-group">
+                                    <li class="list-group-item">تخفيف فعال للألم أثناء المخاض.</li>
+                                    <li class="list-group-item">يسمح للأم بالبقاء واعية ومشاركة تجربتها.</li>
+                                    <li class="list-group-item">يمكن أن يساعد في تسريع الولادة.</li>
+                                    <li class="list-group-item">تحسين شعور الأمان والراحة خلال فترة المخاض.</li>
+                                </ul>
+                                <h2>كيفية تنفيذ إبرة الظهر</h2>
+                                <ol class="list-group">
+                                    <li class="list-group-item">تحضير الأم: تؤخذ الموافقات والتوجيهات الخاصة بالإجراء.</li>
+                                    <li class="list-group-item">حقن التخدير: يتم إدخال إبرة في الفضاء فوق الجافية.</li>
+                                    <li class="list-group-item">مراقبة الحالة: يتم مراقبة الحالة الصحية للأم والطفل لضمان عدم حدوث مضاعفات.</li>
+                                </ol>
+                                <h2>فوائد ومخاطر إبرة الظهر</h2>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <h3>فوائد</h3>
+                                        <ul class="list-group">
+                                            <li class="list-group-item">تخفيف الآلام بشكل ملحوظ.</li>
+                                            <li class="list-group-item">تحسين تجربة الولادة بشكل عام.</li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <h3>مخاطر</h3>
+                                        <ul class="list-group">
+                                            <li class="list-group-item">قد تحدث آثار جانبية مثل صعوبة في الحركة.</li>
+                                            <li class="list-group-item">في حالات نادرة، قد تحدث مضاعفات مثل العدوى.</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-<!-- قسم الفيديوهات -->
-<section class="videos-container">
-    <h2 class="videos-title">📹 مقاطع الفيديو المتعلقة بالولادة</h2>
-    <div class="videos">
-        <div class="video-box">
-            <iframe width="100%" height="315" src="https://www.youtube.com/embed/j4ayI4S0C8w?si=tTIAo7fWnKtfBQVx" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            <p>خطوات التحضير للولادة الطبيعية من التغذية إلى التمارين</p>
-        </div>
-        <div class="video-box">
-            <iframe width="100%" height="315" src="https://www.youtube.com/embed/2p3sBoveSEE?si=_iEVyOjuo5MsiRyS" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            <p>من بدء الانقباضات إلى اللحظة الأخيرة: ما هي مراحل الولادة الثلاث؟</p>
-        </div>
-        <div class="video-box">
-            <iframe width="100%" height="315" src="https://www.youtube.com/embed/GoEsFVzulec?si=PvZKYE8lSDMsLG0f" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            <p>الخوف من الولادة - طب وصحة - ريم أبو خلف</p>
-        </div>
-    </div>
-</section>
-</main>
+        <!-- قسم الفيديوهات -->
+        <section class="videos-container container">
+         <h2 class="videos-title">📹 مقاطع الفيديو المتعلقة بالولادة</h2>
+         <div class="videos">
+            <div class="video-box">
+                <iframe width="100%" height="315" src="https://www.youtube.com/embed/j4ayI4S0C8w?si=tTIAo7fWnKtfBQVx" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <p>خطوات التحضير للولادة الطبيعية من التغذية إلى التمارين</p>
+            </div>
+            <div class="video-box">
+                <iframe width="100%" height="315" src="https://www.youtube.com/embed/2p3sBoveSEE?si=_iEVyOjuo5MsiRyS" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <p>من بدء الانقباضات إلى اللحظة الأخيرة: ما هي مراحل الولادة الثلاث؟</p>
+            </div>
+            <div class="video-box">
+                <iframe width="100%" height="315" src="https://www.youtube.com/embed/GoEsFVzulec?si=PvZKYE8lSDMsLG0f" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <p>الخوف من الولادة - طب وصحة - ريم أبو خلف</p>
+            </div>
+         </div>
+        </section>
+    </main>
     <footer>
         <div id="footer-container"></div>
     </footer>
