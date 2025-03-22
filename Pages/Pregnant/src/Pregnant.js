@@ -10,20 +10,20 @@ function loadHTML(url, containerId, callback) {
 }
 
 document.addEventListener('DOMContentLoaded', function() {
-  let savedLang = localStorage.getItem('selectedLang') || 'ar'; // Default to Arabic
-  let langName = savedLang === 'ar' ? 'العربية' : 'English';
+ /* let savedLang = localStorage.getItem('selectedLang') || 'ar'; // Default to Arabic
+  let langName = savedLang === 'ar' ? 'العربية' : 'English';*/
 
   loadHTML('../../Assets/Html/navbar.html', 'navbar-container', () => {
-      updateUI(savedLang, langName);
+   //   updateUI(savedLang, langName);
   });
 
   loadHTML('../../Assets/Html/footer.html', 'footer-container', () => {
-    updateUI(savedLang, langName);
+   // updateUI(savedLang, langName);
   });
 
-  updatePost(savedLang, langName);
+  //updatePost(savedLang, langName);
 });
 
 // Update Post Content Translation
-async function updatePost(lang, name) {
-}
+/*async function updatePost(lang, name) {
+}*/
