@@ -9,8 +9,8 @@ function loadHTML(url, containerId, callback) {
       .catch(error => console.error('Error loading the HTML file:', error));
 }
 
-/*document.addEventListener('DOMContentLoaded', function() {
-  let savedLang = localStorage.getItem('selectedLang') || 'ar'; // Default to Arabic
+document.addEventListener('DOMContentLoaded', function() {
+/*  let savedLang = localStorage.getItem('selectedLang') || 'ar'; // Default to Arabic
   let langName = savedLang === 'ar' ? 'العربية' : 'English';
 */
   loadHTML('../../Assets/Html/navbar.html', 'navbar-container', () => {
