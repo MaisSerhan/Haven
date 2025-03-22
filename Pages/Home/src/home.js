@@ -82,4 +82,4 @@ document.addEventListener('DOMContentLoaded', function () {
       about.classList.add("text-start");
       about.dir = "ltr";
   }
-}
+}*/
