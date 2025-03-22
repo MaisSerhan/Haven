@@ -15,7 +15,7 @@ window.addEventListener('scroll', function () {
 });
 
 // Load Language JSON File
-async function loadLanguage(lang) {
+/*async function loadLanguage(lang) {
     const response = await fetch(`../../../language/${lang}.json`);
     const data = await response.json();
     return data;
@@ -104,4 +104,4 @@ async function updateUI(lang, name) {
     });
 
     updatePost(lang, name);
-}
+}*/
