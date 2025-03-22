@@ -9,7 +9,7 @@ function loadHTML(url, containerId, callback) {
       .catch(error => console.error('Error loading the HTML file:', error));
 }
 
-document.addEventListener('DOMContentLoaded', function() {
+/*document.addEventListener('DOMContentLoaded', function() {
   let savedLang = localStorage.getItem('selectedLang') || 'ar'; // Default to Arabic
   let langName = savedLang === 'ar' ? 'العربية' : 'English';
 
@@ -26,4 +26,4 @@ document.addEventListener('DOMContentLoaded', function() {
 
 // Update Post Content Translation
 async function updatePost(lang, name) {
-}
+}*/
