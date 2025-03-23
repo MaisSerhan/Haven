@@ -214,6 +214,38 @@ video:hover {
   background: linear-gradient(#ffdbe7, #d18e91) !important;
 
 }
+.button-73 {
+  appearance: none;
+  background-color: #ec3572;
+  border-radius: 40em;
+  border-style: none;
+  box-shadow:  #bdc0f0 0 -6px 8px inset;
+  box-sizing: border-box;
+  color: white;
+  cursor: pointer;
+  display: inline-block;
+  font-family: -apple-system,sans-serif;
+  font-size: 1.2rem;
+  font-weight: 700;
+  letter-spacing: -.24px;
+  margin: 0;
+  outline: none;
+  padding: 1rem 1.3rem;
+  quotes: auto;
+  text-align: center;
+  text-decoration: none;
+  transition: all .15s;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.button-73:hover {
+  color: #000000;
+  background-color: #FFFFFF;
+  box-shadow:#f3adff 0 -6px 8px inset;
+  transform: scale(1.125);
+}
 @keyframes move {
   0%, 100% {
       transform: translateY(0);
