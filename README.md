@@ -3,52 +3,71 @@
 │   index.html
 │   README.md
 │
+├───.vscode
+│       settings.json
+│
 ├───AI
 │       model.txt
 │
 ├───Assets
+│   ├───Html
+│   │       footer.html
+│   │       navbar.html
+│   │
 │   ├───images
 │   │       FullTranLogo.png
 │   │       HalfTranLogo.png
 │   │       HavenLogo.jpg
 │   │
 │   ├───scripts
+│   │       main.js
+│   │
 │   └───styles
 │           styles.css
 │
-├───language
-│       ar.json
-│       en.json
-│       fr.json
-│
 └───Pages
     ├───Birth
-    │   │   home.html
+    │   │   Birth.html
+    │   │   hospital-bag.html
     │   │
     │   └───src
-    │           home.css
-    │           home.js
-    │           home.php
+    │           bag.css
+    │           Birth.css
+    │           Birth.js
     │
     ├───Home
-    │   │   home.html
+    │   │   doctor.html
     │   │
     │   └───src
+    │           audio.js
+    │           doctor.css
     │           home.css
     │           home.js
-    │           home.php
     │
     ├───Login_Signup
-    │       login.html
-    │       signup.php
-    │
-    ├───Pregnant
-    │   │   home.html
+    │   │   login.html
+    │   │   signup.html
     │   │
     │   └───src
-    │           home.css
-    │           home.js
-    │           home.php
+    │           login.css
+    │           signup.css
+    │
+    ├───Pregnant
+    │   │   Pregnant.html
+    │   │
+    │   └───src
+    │           Pregnant.css
+    │           Pregnant.js
+    │
+    ├───Reel
+    │   │   reels.html
+    │   │   script.js
+    │   │   style.css
+    │   │   videoHTML.html
+    │   │
+    │   └───src
+    │           reels.css
+    │           reels.js
     │
     ├───Year1
     │   │   home.html
@@ -56,7 +75,6 @@
     │   └───src
     │           home.css
     │           home.js
-    │           home.php
     │
     └───Year2-3
         │   home.html
@@ -64,5 +82,4 @@
         └───src
                 home.css
                 home.js
-                home.php
 ```
