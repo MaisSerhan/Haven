@@ -59,38 +59,6 @@
     margin-bottom: 15px;
 }
 
-/* الأزرار */
-.btn {
-    display: inline-block;
-    padding: 10px 20px;
-    font-size: 16px;
-    border-radius: 8px;
-    text-decoration: none;
-    transition: 0.3s;
-    font-weight: bold;
-}
-
-.btn-custom {
-    background-color: #FF0057;
-    color: #fff;
-    border: none;
-}
-
-.btn-custom:hover {
-    background-color: #d9044f;
-}
-
-.btn-outline-pink {
-    border: 2px solid #FF0057;
-    color: #FF0057;
-    background-color: transparent;
-}
-
-.btn-outline-pink:hover {
-    background-color: #FF0057;
-    color: #fff;
-}
-
 /* النصائح الغذائية */
 .nutrition-tips {
     text-align: right;
