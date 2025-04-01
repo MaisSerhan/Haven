@@ -1,0 +1,113 @@
+@import url(./styles.css);
+.button-73 {
+    appearance: none;
+    background-color: #ec3572;
+    border-radius: 40em;
+    border-style: none;
+    box-shadow:  #bdc0f0 0 -6px 8px inset;
+    box-sizing: border-box;
+    color: white;
+    cursor: pointer;
+    display: inline-block;
+    font-family: -apple-system,sans-serif;
+    font-size: 1.2rem;
+    font-weight: 700;
+    letter-spacing: -.24px;
+    margin: 0;
+    outline: none;
+    padding: 0.5rem 1.3rem;
+    quotes: auto;
+    text-align: center;
+    text-decoration: none;
+    transition: all .15s;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+  }
+  
+  .button-73:hover {
+    color: #000000;
+    background-color: #FFFFFF;
+    box-shadow:#f3adff 0 -6px 8px inset;
+    transform: scale(1.125);
+  }
+  
+  .stages-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+  }
+  
+  .stages-buttons a {
+    display: inline-block;
+    background-color: var(--red-but);
+    color: white;
+    padding: 12px 20px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+    transition: 0.3s ease-in-out;
+    border: none;
+    cursor: pointer;
+    font-family: 'Roboto', sans-serif;
+    box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .stages-buttons a:hover {
+    background-color: var(--h-red-but);
+    transform: scale(1.1);
+  }
+  .back-button-container {
+    text-align: center;
+    margin-top: 20px;
+  }
+
+ .back-button {
+    display: inline-block;
+    background-color: #d63384;
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    font-size: 18px;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+ }
+
+ .back-button:hover {
+    background-color: #a61e66;
+ }    
+
+ /* الأزرار */
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: 0.3s;
+    font-weight: bold;
+}
+
+.btn-custom {
+    background-color: #FF0057;
+    color: #fff;
+    border: none;
+}
+
+.btn-custom:hover {
+    background-color: #ff8bb2;
+    color: #fffbfb;
+}
+
+.btn-outline-pink {
+    border: 2px solid #FF0057;
+    color: #FF0057;
+    background-color: transparent;
+}
+
+.btn-outline-pink:hover {
+    background-color: #FF0057;
+    color: #fff;
+}

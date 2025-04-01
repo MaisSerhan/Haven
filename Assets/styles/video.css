@@ -1,0 +1,45 @@
+/* تنسيق فيديوهات أسفل الصفحة */
+.videos-container {
+    background-color: #fff;
+    padding: 30px;
+    text-align: center;
+  }
+  
+  .videos-title {
+    font-size: 28px;
+    color: #630565;
+    margin-bottom: 20px;
+    font-family: 'Satisfy', cursive;
+  }
+  
+  .videos {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+  
+  .video-box {
+    width: 100%;
+    max-width: 320px;
+    background-color: #f9f9f9;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  }
+  
+  video {
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 10px;
+  }
+  
+  video:hover {
+    transform: scale(1.03);
+    transition: transform 0.3s ease;
+  }
+  .back-mother{
+    box-shadow: inset 0 0 10px rgba(255, 63, 126, 0.5);
+    background: linear-gradient(#ffdbe7, #d18e91) !important;
+  
+  }
