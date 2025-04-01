@@ -1,47 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Satisfy&display=swap');
-@import url('../../Home/src/home.css');
+@import url(../../../Assets/styles/navbar.css);
+@import url(../../../Assets/styles/button.css);
+@import url(../../../Assets/styles/video.css);
 
-body{
-    background-color: #FEDDF7;
-}
-header {
-  position: sticky;
-  top: 0;
-  width: 100%;
-  z-index: 1000;
-  transition: top 0.3s ease; /* Smooth transition */
-}
-
-
-header.hidden {
-  top: -100px; /* Hide above the viewport */
-}
-nav a, .pink{
-    color: #FF0057 !important;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-}
-.bgpink, .accordion-button:not(.collapsed) {
-  color: #630565;
-  
-}
-nav a {
-    font-family: math;
-}
 .carousel-item img {
     height: 70vh;  /* Or a fixed height like 400px */
     object-fit: cover; /* or contain, depending on how you want the image to fit */
 }
-.carousel-control-prev-icon,
-.carousel-control-next-icon {
-  filter: invert(48%) sepia(93%) saturate(4788%) hue-rotate(328deg) brightness(96%) contrast(90%); /* #FF0057 */
-}
+
 body section , #about{
   margin-bottom: 20vh !important; /* Adjust the spacing as needed */
-}
-/* Optional hover effect (example) */
-.carousel-control-prev:hover .carousel-control-prev-icon,
-.carousel-control-next:hover .carousel-control-next-icon {
-  filter: invert(30%) sepia(90%) saturate(3000%) hue-rotate(325deg) brightness(95%) contrast(100%); /* Slightly different shade on hover */
 }
     
 .pregnancy-stages h2 {
@@ -51,33 +19,6 @@ body section , #about{
   margin-bottom: 15px;
 }
 
-.stages-buttons {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 15px;
-}
-
-.stages-buttons a {
-  display: inline-block;
-  background-color: #FF0057;
-  color: white;
-  padding: 12px 20px;
-  border-radius: 8px;
-  text-decoration: none;
-  font-size: 16px;
-  font-weight: 500;
-  transition: 0.3s ease-in-out;
-  border: none;
-  cursor: pointer;
-  font-family: 'Roboto', sans-serif;
-  box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.1);
-}
-
-.stages-buttons a:hover {
-  background-color: #d9044f;
-  transform: scale(1.1);
-}
 .pregnancy-stages {
   padding: 20px;
   background-color: #fff3f8; /* لون خلفية متناسق مع الصفحة */
@@ -89,7 +30,7 @@ body section , #about{
 }
 
 .full-bg {
-  
+  background-image: url(https://navyhealth.com.au/wp-content/uploads/2021/05/NAV21481-May-Blog-WEB_DE1.13.png);
   background-size: cover;
   background-position: center;
   min-height: 70vh;
@@ -136,11 +77,6 @@ body section , #about{
     background-color: #e6004c;
 }
 
-
-
-.full-bg {
-    background-image: url(https://navyhealth.com.au/wp-content/uploads/2021/05/NAV21481-May-Blog-WEB_DE1.13.png);
-}
 #about {
   margin-bottom: 16vh !important;
 }
@@ -169,83 +105,13 @@ text-align: center;
 .list-group-item{
   background-color: #fff0f8;
 }
-/* تنسيق فيديوهات أسفل الصفحة */
-.videos-container {
-  background-color: #fff;
-  padding: 30px;
-  text-align: center;
-}
 
-.videos-title {
-  font-size: 28px;
-  color: #630565;
-  margin-bottom: 20px;
-  font-family: 'Satisfy', cursive;
-}
-
-.videos {
-  display: flex;
-  justify-content: space-around;
-  gap: 20px;
-  flex-wrap: wrap;
-}
-
-.video-box {
-  width: 100%;
-  max-width: 320px;
-  background-color: #f9f9f9;
-  padding: 15px;
-  border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-}
-
-video {
-  width: 100%;
-  border-radius: 8px;
-  margin-bottom: 10px;
-}
-
-video:hover {
-  transform: scale(1.03);
-  transition: transform 0.3s ease;
-}
 .back-mother{
   box-shadow: inset 0 0 10px rgba(255, 63, 126, 0.5);
   background: linear-gradient(#ffdbe7, #d18e91) !important;
 
 }
-.button-73 {
-  appearance: none;
-  background-color: #ec3572;
-  border-radius: 40em;
-  border-style: none;
-  box-shadow:  #bdc0f0 0 -6px 8px inset;
-  box-sizing: border-box;
-  color: white;
-  cursor: pointer;
-  display: inline-block;
-  font-family: -apple-system,sans-serif;
-  font-size: 1.2rem;
-  font-weight: 700;
-  letter-spacing: -.24px;
-  margin: 0;
-  outline: none;
-  padding: 1rem 1.3rem;
-  quotes: auto;
-  text-align: center;
-  text-decoration: none;
-  transition: all .15s;
-  user-select: none;
-  -webkit-user-select: none;
-  touch-action: manipulation;
-}
 
-.button-73:hover {
-  color: #000000;
-  background-color: #FFFFFF;
-  box-shadow:#f3adff 0 -6px 8px inset;
-  transform: scale(1.125);
-}
 @keyframes move {
   0%, 100% {
       transform: translateY(0);
