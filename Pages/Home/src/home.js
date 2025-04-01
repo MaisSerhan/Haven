@@ -6,6 +6,7 @@ function loadHTML(url, containerId, callback) {
       .then(data => {
           document.getElementById(containerId).innerHTML = data;
           if (callback) callback();
+          navbar();
       })
       .catch(error => console.error('Error loading the HTML file:', error));
 }
@@ -22,3 +23,16 @@ document.addEventListener('DOMContentLoaded', function () {
    
   });
 });
+
+function navbar(){
+const navLinks = document.querySelectorAll(".navbar-nav .nav-link");
+  const navbarCollapse = document.querySelector(".navbar-collapse");
+  console.log(navLinks,navLinks[0],navbarCollapse)
+  navLinks.forEach(link => {
+      link.addEventListener("click", () => {
+          if (navbarCollapse.classList.contains("show")) {
+            navbarCollapse.classList.remove("show");
+          }
+      });
+  });
+};
