@@ -1,3 +1,4 @@
+@import url(../../../Assets/styles/button.css);
 /* خلفية ناعمة */
 body {
     background: linear-gradient(to bottom, #ffdde1, #ee9ca7);
@@ -74,25 +75,7 @@ body {
     min-width: 350px;
 }
 
-.back-button-container {
-    text-align: center;
-    margin-top: 20px;
-}
 
-.back-button {
-    display: inline-block;
-    background-color: #d63384;
-    color: white;
-    text-decoration: none;
-    padding: 10px 20px;
-    font-size: 18px;
-    border-radius: 5px;
-    transition: background 0.3s ease;
-}
-
-.back-button:hover {
-    background-color: #a61e66;
-}
 
 /* تنسيق حاوية الجدول */
 .routine-container {
@@ -165,38 +148,6 @@ td {
     }
 }
 
-/* تنسيق الفيديو */
-.video-container {
-    width: 90%;
-    max-width: 800px;
-    background: white;
-    padding: 20px;
-    margin-top: 20px;
-    border-radius: 15px;
-    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
-    text-align: center;
-}
-
-.video-container h2 {
-    color: #630565;
-    font-size: 24px;
-    margin-bottom: 15px;
-}
-
-/* جعل الفيديو متجاوبًا */
-.video-container iframe {
-    width: 100%;
-    height: 350px;
-    border-radius: 10px;
-    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
-}
-
-/* تحسين الفيديو على الشاشات الصغيرة */
-@media (max-width: 600px) {
-    .video-container iframe {
-        height: 250px;
-    }
-}
 
 /* تنسيق القوائم الجانبية */
 .sidebar {
@@ -249,17 +200,6 @@ td {
     background: #ffb6c1;
 }
 
-/* تحسين التخطيط عند الشاشات الصغيرة */
-@media (max-width: 900px) {
-    .sidebar {
-        display: none;
-    }
-
-    .tables-container, .routine-container, .video-container {
-        width: 100%;
-        padding: 15px;
-    }
-}
 .baby-image {
     text-align: center;
     margin-top: 20px;
@@ -278,4 +218,63 @@ td {
     color: #555;
     margin-top: 5px;
     text-align: center;
+}
+
+/* تحسين التخطيط عند الشاشات الصغيرة */
+@media (max-width: 1500px) {
+    body {
+        width: 44%;
+        margin-left: 29%;
+    }
+    .sidebar {
+        width: 23%;
+    }
+}
+
+@media (max-width: 900px) {
+    .info-container {
+        flex: 1;
+        min-width: 96%;
+    }
+    .sidebar {
+        display: none;
+    }
+    body {
+        width: 95%;
+        margin-left: 3%;
+    }
+    .video-table-container iframe{
+        width: 74vh;
+        display: block;
+    } 
+    .video-table-container td, .video-table-container th,.video-table-container tr{
+       width: 77vh;
+        display: block;
+    }
+
+    .tables-container, .routine-container, .video-container {
+        width: 97%;
+        padding: 15px;
+    }
+    .video-table{
+        margin-left: 13%;
+        width: 80%;
+    }
+}
+@media (max-width: 750px) {
+    .video-table{
+        margin-left: 0%;
+        width: 98%;
+    } 
+    body {
+        width: 95%;
+        margin-left: 0%;
+    }
+    .video-table-container iframe{
+        width: 95%;
+    }
+    .video-table-container td, .video-table-container th, .video-table-container tr {
+        width: 100%;
+        display: block;
+    }
 }
