@@ -10,37 +10,43 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="shortcut icon" href="../../Assets/images/HalfTranLogo.png">
-    <title>Sign Up Page</title>
+    <title>صفحة التسجيل</title>
     <link rel="stylesheet" href="./src/signup.css">
     <link rel="shortcut icon" href="../../Assets/images/HalfTranLogo.png">
+    <style>
+    </style>
 </head>
 <body>
-    <div class="container">
-        <a class="navbar-brand logo fs-2  mx-auto" href="../../index.html">
+    <div class="container text-center">
+        <a class="navbar-brand logo fs-2" href="../../index.html">
             <img src="../../Assets/images/HalfTranLogo.png" alt="Haven Logo" class="logo" width="50px">
             <span class="i18n-haven-title"></span>
         </a>
-        <h2>Sign Up</h2>
+        <h2>إنشاء حساب</h2>
         <div class="form-box">
             <div class="input-box">
-                <label for="username">Username</label>
-                <input type="text" id="username" placeholder="Enter your username" required>
+                <label for="username">اسم المستخدم</label>
+                <input type="text" id="username" placeholder="أدخل اسم المستخدم" required>
             </div>
             <div class="input-box">
-                <label for="email">Email</label>
-                <input type="email" id="email" placeholder="Enter your email" required>
+                <label for="email">البريد الإلكتروني</label>
+                <input type="email" id="email" placeholder="أدخل بريدك الإلكتروني" required>
             </div>
             <div class="input-box">
-                <label for="password">Password</label>
-                <input type="password" id="password" placeholder="Enter your password" required>
+                <label for="password">كلمة المرور</label>
+                <input type="password" id="password" placeholder="أدخل كلمة المرور" required>
+                <button class="toggle-password" onclick="togglePassword('password', this)"><i class="fa fa-eye" style="color: #ff3f7e;"></i></button>
             </div>
             <div class="input-box">
-                <label for="confirm-password">Confirm Password</label>
-                <input type="password" id="confirm-password" placeholder="Confirm your password" required>
+                <label for="confirm-password">تأكيد كلمة المرور</label>
+                <input type="password" id="confirm-password" placeholder="أكد كلمة المرور" required>
+                <button class="toggle-password" onclick="togglePassword('confirm-password', this)"><i class="fa fa-eye" style="color: #ff3f7e;"></i></button>
             </div>
-            <button type="submit">SIGN UP</button>
-            <a href="./login.html">Already have an account? Login</a>
+            <button type="submit">إنشاء الحساب</button>
+            <a href="./login.html">لديك حساب بالفعل؟ تسجيل الدخول</a>
         </div>
     </div>
+    <!-- Code injected by live-server -->
+    <script src="./src/login.js"></script>
 </body>
 </html>
