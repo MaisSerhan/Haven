@@ -6,21 +6,7 @@ body {
     margin: 0;
     padding: 0;
 }
-
-header {
-    background-color: #fff;
-    padding: 15px 30px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-}
-
-nav a.logo {
-    color: #FF0057;
-    font-weight: bold;
-    font-size: 28px;
-    text-decoration: none;
-    font-family: 'Satisfy', cursive;
-}
-
+/*
 .hero {
     text-align: center;
     padding: 20px;
@@ -48,7 +34,7 @@ nav a.logo {
     max-width: 700px;
     margin: 0 auto;
 }
-
+*/
 .content-container {
     display: flex;
     flex-wrap: wrap;
