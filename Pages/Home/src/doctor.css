@@ -3,3 +3,14 @@
 .full-bg {
     background-image: url(https://ppost.ps/uploads/images/2023/09/sysUC.jpg);
 }
+.stages-buttons a {
+    width: 120px;
+}
+.left-content {
+    padding: 194px 290px;
+}
+@media (max-width: 320px) {
+    .left-content {
+        padding: 382px 20%;
+    }
+}
