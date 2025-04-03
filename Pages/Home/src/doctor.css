@@ -9,6 +9,11 @@
 .left-content {
     padding: 194px 290px;
 }
+@media (max-width: 750px) {
+    .left-content {
+        padding: 241px 46%;
+    }
+}
 @media (max-width: 320px) {
     .left-content {
         padding: 382px 20%;
