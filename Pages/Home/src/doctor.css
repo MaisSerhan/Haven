@@ -14,6 +14,12 @@
         padding: 241px 46%;
     }
 }
+@media (max-width: 380px) {
+    .full-bg {
+        padding-top: 52vh !important;
+        padding-bottom: 52vh !important;
+    }
+}
 @media (max-width: 320px) {
     .left-content {
         padding: 382px 20%;
