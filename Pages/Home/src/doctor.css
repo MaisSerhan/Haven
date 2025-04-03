@@ -19,13 +19,12 @@
         padding-top: 58vh !important;
         padding-bottom: 58vh !important;
     }
+    .stages-buttons a {
+        width: 80%;
+    }
 }
 @media (max-width: 320px) {
     .left-content {
         padding: 382px 20%;
-    }
-    #about {
-    margin-top: 19vh !important;
-    margin-bottom: 19vh !important;
     }
 }
