@@ -14,7 +14,7 @@
         padding: 241px 46%;
     }
 }
-@media (max-width: 380px) {
+@media (max-width: 360px) {
     .left-content {
         padding: 382px 20%;
     }
