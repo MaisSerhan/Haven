@@ -13,4 +13,8 @@
     .left-content {
         padding: 382px 20%;
     }
+    #about {
+    margin-top: 19vh !important;
+    margin-bottom: 19vh !important;
+    }
 }
