@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>سجل التطعيمات</title>
+  <link rel="shortcut icon" href="../../Assets/images/HalfTranLogo.png">
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.rtl.min.css" rel="stylesheet" />
+  <!-- ملف التنسيق الخاص -->
+  <link rel="stylesheet" href="./src/Vacc.css" />
+</head>
+<body>
+
+  <div class="container py-5">
+    <h2 class="text-center pink mb-4">🩺 سجل التطعيمات في فلسطين</h2>
+
+    <div class="row g-4">
+      
+      <!-- الولادة -->
+      <div class="col-md-6">
+        <div class="card shadow-sm">
+          <div class="card-body">
+            <h5 class="card-title">الولادة - لقاح السل (BCG)</h5>
+            <p class="card-text">📅 عند الولادة</p>
+            <button class="btn btn-outline-danger status-btn" onclick="toggleStatus(this)">❌ لم يتم</button>
+          </div>
+        </div>
+      </div>
+      
+      <div class="col-md-6">
+        <div class="card shadow-sm">
+          <div class="card-body">
+            <h5 class="card-title">الولادة - شلل الأطفال الفموي (OPV0)</h5>
+            <p class="card-text">📅 عند الولادة</p>
+            <button class="btn btn-outline-danger status-btn" onclick="toggleStatus(this)">❌ لم يتم</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- 6 أسابيع -->
+      <div class="col-md-6">
+        <div class="card shadow-sm">
+          <div class="card-body">
+            <h5 class="card-title">6 أسابيع - اللقاح الخماسي (Penta1)</h5>
+            <p class="card-text">📅 عمر 6 أسابيع</p>
+            <button class="btn btn-outline-danger status-btn" onclick="toggleStatus(this)">❌ لم يتم</button>
+          </div>
+        </div>
+      </div>
+      
+      <div class="col-md-6">
+        <div class="card shadow-sm">
+          <div class="card-body">
+            <h5 class="card-title">6 أسابيع - شلل الأطفال الفموي (OPV1)</h5>
+            <p class="card-text">📅 عمر 6 أسابيع</p>
+            <button class="btn btn-outline-danger status-btn" onclick="toggleStatus(this)">❌ لم يتم</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- 10 أسابيع -->
+      <div class="col-md-6">
+        <div class="card shadow-sm">
+          <div class="card-body">
+            <h5 class="card-title">10 أسابيع - اللقاح الخماسي (Penta2)</h5>
+            <p class="card-text">📅 عمر 10 أسابيع</p>
+            <button class="btn btn-outline-danger status-btn" onclick="toggleStatus(this)">❌ لم يتم</button>
+          </div>
+        </div>
+      </div>
+      
+      <div class="col-md-6">
+        <div class="card shadow-sm">
+          <div class="card-body">
+            <h5 class="card-title">10 أسابيع - شلل الأطفال الفموي (OPV2)</h5>
+            <p class="card-text">📅 عمر 10 أسابيع</p>
+            <button class="btn btn-outline-danger status-btn" onclick="toggleStatus(this)">❌ لم يتم</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- 14 أسبوع -->
+      <div class="col-md-6">
+        <div class="card shadow-sm">
+          <div class="card-body">
+            <h5 class="card-title">14 أسبوع - اللقاح الخماسي (Penta3)</h5>
+            <p class="card-text">📅 عمر 14 أسبوع</p>
+            <button class="btn btn-outline-danger status-btn" onclick="toggleStatus(this)">❌ لم يتم</button>
+          </div>
+        </div>
+      </div>
+      
+      <div class="col-md-6">
+        <div class="card shadow-sm">
+          <div class="card-body">
+            <h5 class="card-title">14 أسبوع - شلل الأطفال الفموي (OPV3)</h5>
+            <p class="card-text">📅 عمر 14 أسبوع</p>
+            <button class="btn btn-outline-danger status-btn" onclick="toggleStatus(this)">❌ لم يتم</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- 9 أشهر -->
+      <div class="col-md-6">
+        <div class="card shadow-sm">
+          <div class="card-body">
+            <h5 class="card-title">9 أشهر - لقاح الحصبة (Measles1)</h5>
+            <p class="card-text">📅 عمر 9 أشهر</p>
+            <button class="btn btn-outline-danger status-btn" onclick="toggleStatus(this)">❌ لم يتم</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- 15 شهر -->
+      <div class="col-md-6">
+        <div class="card shadow-sm">
+          <div class="card-body">
+            <h5 class="card-title">15 شهر - الجرعة الثانية من الحصبة (Measles2)</h5>
+            <p class="card-text">📅 عمر 15 شهر</p>
+            <button class="btn btn-outline-danger status-btn" onclick="toggleStatus(this)">❌ لم يتم</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <div class="text-center mb-5 mt-5"><a href="oneYear.html" class="button-73">العودة للسنة الاولى</a></div>
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- ملف JS -->
+  <script src="./src/Vacc.js"></script>
+</body>
+</html>
