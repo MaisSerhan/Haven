@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>اكتشاف سبب بكاء الطفل</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f9;
+      direction: rtl;
+      padding: 20px;
+    }
+    .container {
+      max-width: 800px;
+      margin: auto;
+      background-color: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    h1 {
+      text-align: center;
+      color: #5e42a6;
+    }
+    .btn-record {
+      display: block;
+      width: 100%;
+      padding: 15px;
+      background-color: #ff5c8d;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-size: 18px;
+      cursor: pointer;
+      margin-bottom: 20px;
+    }
+    .result-box {
+      padding: 20px;
+      background-color: #eef1f4;
+      border-radius: 8px;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+    .result-text {
+      font-size: 18px;
+      color: #333;
+    }
+    .advice {
+      padding: 10px;
+      background-color: #fff5e6;
+      border-radius: 8px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1>اكتشف سبب بكاء طفلك</h1>
+    <button class="btn-record" onclick="startRecording()">ابدأ التسجيل</button>
+
+    <div class="result-box">
+      <p class="result-text" id="resultText">النتيجة ستظهر هنا بعد التحليل</p>
+    </div>
+
+    <div class="advice" id="adviceBox">
+      <p>نصيحة حول كيفية التعامل مع البكاء</p>
+    </div>
+
+    <div class="history">
+      <h3>تاريخ الجلسات السابقة:</h3>
+      <ul id="historyList">
+        <!-- سيتم إضافة الجلسات السابقة هنا -->
+      </ul>
+    </div>
+  </div>
+
+  <script>
+    // هذه الدالة ستتولى بدء عملية التسجيل
+    function startRecording() {
+      // من هنا يمكن ربط الكود لتحليل الصوت باستخدام الذكاء الاصطناعي
+      document.getElementById("resultText").textContent = "يتم الآن تحليل البكاء...";
+      document.getElementById("adviceBox").style.display = 'none';
+      
+      // محاكاة لتحليل الصوت - هنا يمكن استبدالها بنموذج الذكاء الاصطناعي
+      setTimeout(() => {
+        const result = "الطفل جائع"; // سيتم تحديد السبب هنا من قبل النموذج
+        const advice = "قدمي له الحليب أو الطعام.";
+        
+        document.getElementById("resultText").textContent = result;
+        document.getElementById("adviceBox").textContent = advice;
+        document.getElementById("adviceBox").style.display = 'block';
+
+        // إضافة التاريخ إلى الجلسات السابقة
+        const historyList = document.getElementById("historyList");
+        const listItem = document.createElement("li");
+        listItem.textContent = `بكاء الطفل بسبب: ${result}`;
+        historyList.appendChild(listItem);
+      }, 3000); // محاكاة تأخير التحليل (3 ثواني)
+    }
+  </script>
+
+</body>
+</html>
