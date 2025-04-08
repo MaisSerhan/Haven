@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', function () {
   loadHTML('../../Assets/Html/footer.html', 'footer-container', () => {
   });
 });
-
+/*
 function navbar(){
 const navLinks = document.querySelectorAll(".navbar-nav .nav-link");
   const navbarCollapse = document.querySelector(".navbar-collapse");
@@ -19,3 +19,4 @@ const navLinks = document.querySelectorAll(".navbar-nav .nav-link");
       });
   });
 };
+*/
