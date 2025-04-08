@@ -36,6 +36,17 @@
         <iframe src="https://do-calculate.com/calculator/ar/pregnancy/" id="myIframe"></iframe>
         <div class="overlay"></div>
     </div>
+    <script>
+const iframe = document.getElementById("myIframe");
+const suss=document.querySelector('.bg-success');
+console.log(iframe ,suss)
+iframe.onload = function() {console.log(iframe ,suss)
+    const iframeDoc = iframe.contentDocument || iframe.contentWindow.document;
+    iframeDoc.body.style.backgroundColor = "rgb(255, 171, 200)";
+    suss.style.backgroundColor="rgb(255 171 200) !important" ;
+};
+
+</script>
     <script src="../../Assets/scripts/main.js"></script>
     <script src="./src/clc.js"></script>
 </body>
