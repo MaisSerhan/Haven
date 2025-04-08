@@ -7,7 +7,7 @@ iframe.onload = function() {console.log(iframe ,suss)
     const iframeDoc = iframe.contentDocument || iframe.contentWindow.document;
     iframeDoc.body.style.backgroundColor = "rgb(255, 171, 200)";
     suss.style.backgroundColor="rgb(255 171 200) !important" ;
-};   
-  });
+});   
+});
 
 
