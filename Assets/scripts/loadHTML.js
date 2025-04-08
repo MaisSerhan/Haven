@@ -8,8 +8,3 @@ function loadHTML(url, containerId, callback) {
         })
         .catch(error => console.error('Error loading the HTML file:', error));
   }
-  
-  document.addEventListener('DOMContentLoaded', function() {
-    loadHTML('../../Assets/Html/footer.html', 'footer-container', () => {
-    });
-  });
