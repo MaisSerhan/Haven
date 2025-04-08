@@ -35,6 +35,7 @@
         <iframe src="https://do-calculate.com/calculator/ar/pregnancy-due-date/" id="myIframe"></iframe>
         <div class="overlay"></div>
     </div>
+<script src="../../Assets/scripts/main.js"></script>
 <script>
 const iframe = document.getElementById("myIframe");
 const suss=document.querySelector('.bg-success');
@@ -44,8 +45,11 @@ iframe.onload = function() {console.log(iframe ,suss)
     iframeDoc.body.style.backgroundColor = "rgb(255, 171, 200)";
     suss.style.backgroundColor="rgb(255 171 200) !important" ;
 };
-
+document.addEventListener('DOMContentLoaded', function () {
+  loadHTML('../../Assets/Html/navbar.html', 'navbar-container', () => {
+    
+  });
 </script>
-<script src="../../Assets/scripts/main.js"></script>
+
 </body>
 </html>
