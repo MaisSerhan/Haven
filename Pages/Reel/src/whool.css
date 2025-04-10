@@ -1,0 +1,5 @@
+@import url(./reels.css);
+iframe{
+   height: 80vh; 
+   width: 80%;
+}
