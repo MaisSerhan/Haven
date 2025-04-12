@@ -51,7 +51,7 @@ body {
     transition: transform 0.3s ease-in-out;
 }
 .img-content-box {
-  width: 80%;
+  width: 40%;
   height: 80%;
 }
 .content-box:hover {
@@ -135,4 +135,10 @@ p {
     font-size: 16px;
     color: #444;
     margin-top: 10px;
+}
+@media (max-width: 770px) {
+  .img-content-box {
+    width: 84%;
+    height: 80%;
+  }
 }
