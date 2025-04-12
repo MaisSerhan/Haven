@@ -51,8 +51,8 @@ body {
     transition: transform 0.3s ease-in-out;
 }
 .img-content-box {
-  width: 70%;
-  height: 70%;
+  width: 80%;
+  height: 80%;
 }
 .content-box:hover {
     transform: translateY(-5px);
