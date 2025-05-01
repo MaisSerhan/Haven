@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="shortcut icon" href="../../Assets/images/HalfTranLogo.png">
-    <title>صفحة التسجيل</title>
+    <title>صفحة انشاء حساب للطبيب</title>
     <link rel="stylesheet" href="./src/signup.css">
     <link rel="shortcut icon" href="../../Assets/images/HalfTranLogo.png">
     <style>
@@ -37,10 +37,19 @@
                 <input type="password" id="password" placeholder="أدخل كلمة المرور" required>
                 <button class="toggle-password" onclick="togglePassword('password', this)"><i class="fa fa-eye" style="color: #ff3f7e;"></i></button>
             </div>
-            <div class="input-box">
+            <div class="input-box mb-2">
                 <label for="confirm-password">تأكيد كلمة المرور</label>
                 <input type="password" id="confirm-password" placeholder="أكد كلمة المرور" required>
                 <button class="toggle-password" onclick="togglePassword('confirm-password', this)"><i class="fa fa-eye" style="color: #ff3f7e;"></i></button>
+            </div>
+            <!-- اختيار التخصص -->
+            <div class="input-box inline-flex me-5 me-sm-1">
+                <label for="stage">اختر التخصص</label>
+                <select id="stage" name="stage" required onchange="togglePregnancyMonths()">
+                    <option value="">-- اختر التخصص --</option>
+                    <option value="نسائية">نسائية وتوليد</option>
+                    <option value="أطفال">طبيب أطفال</option>
+                </select>
             </div>
             <!-- اختيار المدينة -->
             <span class="input-box inline-flex">
@@ -59,41 +68,18 @@
                     <option value="طوباس">طوباس</option>
                 </select>
             </span>
-            <!-- اختيار المدينة -->
-            <div class="input-box inline-flex me-5 me-sm-1">
-                <label for="stage">اختر مرحلتك</label>
-                <select id="stage" name="stage" required onchange="togglePregnancyMonths()">
-                    <option value="">-- اختر مرحلتك --</option>
-                    <option value="حمل">حمل</option>
-                    <option value="ولادة">ولادة</option>
-                    <option value="السنة الاولى من طفلك">السنة الاولى من طفلك</option>
-                    <option value="السنة 2-3 من طفلك">السنة 2-3 من طفلك</option>
-                </select>
+            <div class="input-box mt-3">
+                <label for="Location">أدخل موقعك الجغرافي كرابط</label>
+                <input type="url" id="Location" placeholder="أدخل URL موقعك" required>
             </div>
-            
-            <div class="input-box inline-flex me-5 me-sm-1" id="monthBox" style="display: none;">
-                <label for="month">حساب الحمل</label>
-                <label for="last-period-date">تاريخ آخر دورة شهرية</label>
-                <input type="date" class=" mb-3" id="last-period-date" placeholder="تاريخ آخر دورة شهرية">
-                <select id="month" name="month">
-                    <option value="">-- اختر الشهر الحمل--</option>
-                    <option value="1">الشهر الأول</option>
-                    <option value="2">الشهر الثاني</option>
-                    <option value="3">الشهر الثالث</option>
-                    <option value="4">الشهر الرابع</option>
-                    <option value="5">الشهر الخامس</option>
-                    <option value="6">الشهر السادس</option>
-                    <option value="7">الشهر السابع</option>
-                    <option value="8">الشهر الثامن</option>
-                    <option value="9">الشهر التاسع</option>
-                </select>
-                 </div>
-            
-
+            <div class="input-box">
+                <label for="phone">رقم الهاتف</label>
+                <input type="tel" id="phone" name="phone" placeholder="أدخل رقم الهاتف" required pattern="^\+?\d{8,15}$">
+            </div>
             <!-- رفع صورة -->
             <div class="input-box text-center">
-                <label for="profile-picture">صورتك بموقع هافن</label>
-                <input type="file" class="text-center" id="profile-picture" name="profile-picture" accept="image/*" >
+                <label for="profile-picture">الصورة بطاقة الدكتور</label>
+                <input type="file" class="text-center" id="profile-picture" name="profile-picture" accept="image/*" required>
             </div>
             <div class="mt-2">
                 <button type="submit">إنشاء الحساب</button>
