@@ -2,6 +2,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
   loadHTML('../../Assets/Html/navbar.html', 'navbar-container', () => {
    //   updateUI(savedLang, langName);
+        publicationLink ();
   });
 
   loadHTML('../../Assets/Html/footer.html', 'footer-container', () => {
@@ -10,6 +11,16 @@ document.addEventListener('DOMContentLoaded', function() {
 
   //updatePost(savedLang, langName);
 });
+function publicationLink () {
+    const publicationLink = document.querySelector('.i18n-publications');
+    console.log(publicationLink)
+    if (publicationLink) {
+        publicationLink.textContent = 'الفطام';
+        publicationLink.setAttribute('href', './Weaning.html');
+    } else {
+        console.warn('لم يتم العثور على رابط المنشورات لتغييره.');
+    }
+};
 
 document.addEventListener("DOMContentLoaded", function() {
   // الحصول على الأزرار الخاصة بالقائمة المنسدلة
