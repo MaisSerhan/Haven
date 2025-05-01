@@ -1,0 +1,45 @@
+@import url(../../../Assets/styles/styles.css);
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: var(--background);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+  }
+
+  .signup-container {
+    background-color: #fff;
+    border-radius: 16px;
+    padding: 40px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    text-align: center;
+    width: 90%;
+    max-width: 500px;
+  }
+
+  h2 {
+    margin-bottom: 24px;
+    color: #333;
+  }
+
+  .role-option {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .role-option a {
+    text-decoration: none;
+    padding: 15px;
+    border-radius: 12px;
+    background-color: var(--red-but);
+    color: white;
+    font-size: 18px;
+    transition: background-color 0.3s ease;
+  }
+
+  .role-option a:hover {
+    background-color: var(--a-col);
+  }

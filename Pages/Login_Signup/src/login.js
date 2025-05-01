@@ -9,3 +9,13 @@ function togglePassword(fieldId, button) {
     }
     event.preventDefault();
 }
+function togglePregnancyMonths() {
+    const stageSelect = document.getElementById('stage');
+    const monthBox = document.getElementById('monthBox');
+    
+    if (stageSelect.value === 'حمل') {
+        monthBox.style.display = 'flex'; // أو 'block' حسب التنسيق
+    } else {
+        monthBox.style.display = 'none';
+    }
+}
