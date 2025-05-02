@@ -1,8 +1,9 @@
 @import url(../../Pregnant/src/Pregnant.css);
 
 .full-bg {
-    background-image: url(https://ppost.ps/uploads/images/2023/09/sysUC.jpg);
-}
+    background-image: url(https://ik.imagekit.io/cywqg5brs/imagesHaven/palestine.png?updatedAt=1746030056392);
+    background-size: 100% 105%;
+}   
 .stages-buttons a {
     width: 120px;
 }
@@ -15,6 +16,9 @@
     }
 }
 @media (max-width: 380px) {
+    .full-bg {
+        background-image:none
+    }
     .full-bg {
         padding-top: 58vh !important;
         padding-bottom: 58vh !important;
