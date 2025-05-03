@@ -131,7 +131,8 @@ input[type="file"] {
     background-color: #f9f9f9;
     border: 1px solid #ddd;
     border-radius: 6px;
-    padding: 8px;
+    padding: 8px 28%;
+    margin: auto;
     width: 100%;
 }
 select {
