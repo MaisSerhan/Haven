@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <title>إضافة موعد</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.rtl.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.rtl.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.8/index.global.min.css" rel="stylesheet">
+  <!-- Bootstrap RTL -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.rtl.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="./src/app.css">
+  <link rel="shortcut icon" href="../../Assets/images/HalfTranLogo.png">
+</head>
+<body class="container mt-5">
+  <h2 class="mb-4 text-center">➕ إضافة موعد جديد</h2>
+  
+  <form action="saveAppointment.php" method="POST">
+    <div class="mb-3">
+      <label for="doctor" class="form-label">اسم الطبيب</label>
+      <input type="text" class="form-control" id="doctor" name="doctor" required>
+    </div>
+
+    <div class="mb-3">
+      <label for="patient" class="form-label">اسم المريض</label>
+      <input type="text" class="form-control" id="patient" name="patient" required>
+    </div>
+
+    <!-- ✅ New field for phone number -->
+    <div class="mb-3">
+      <label for="phone" class="form-label">رقم الهاتف</label>
+      <input type="tel" class="form-control" id="phone" name="phone" pattern="[0-9]{10}" placeholder="05XXXXXXXX" required>
+      <small class="form-text text-muted">أدخل رقم جوال مكون من 10 أرقام.</small>
+    </div>
+
+    <div class="mb-3">
+      <label for="date" class="form-label">تاريخ الموعد</label>
+      <input type="date" class="form-control" id="date" name="date" required>
+    </div>
+
+    <div class="mb-3">
+      <label for="start_time" class="form-label">الوقت (بداية الموعد)</label>
+      <input type="time" class="form-control" id="start_time" name="start_time" required>
+    </div>
+
+    <div class="mb-3">
+      <label for="end_time" class="form-label">الوقت (نهاية الموعد)</label>
+      <input type="time" class="form-control" id="end_time" name="end_time" required>
+    </div>
+
+    <div class="d-flex justify-content-between">
+      <a href="./DoCal.html" class="btn btn-secondary">🔙 رجوع</a>
+      <button type="submit" class="btn btn-success">💾 حفظ الموعد</button>
+    </div>
+  </form>
+</body>
+</html>
