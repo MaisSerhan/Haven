@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <title>لوحة التحكم - إدارة الأطباء</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.rtl.min.css" rel="stylesheet">
+  <!-- Bootstrap RTL -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.rtl.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="./src/admin.css">
+  <link rel="shortcut icon" href="../../Assets/images/HalfTranLogo.png">
+  <style>
+    .card {
+      background-color: #ffffff;
+    }
+  </style>
+</head>
+<body class="container mt-5">
+  <h2 class="text-center mb-4">👨‍⚕️ لوحة التحكم - إدارة الأطباء</h2>
+
+  <!-- إضافة طبيب جديد -->
+  <div class="card mb-4 p-4">
+    <a href="../Login_Signup/DocSign.html" class="btn btn-success mb-3">➕ إضافة طبيب جديد</a>
+  </div>
+
+  <!-- قائمة الأطباء -->
+  <div class="card p-4">
+    <h5 class="mb-3">📋 قائمة الأطباء</h5>
+    <table class="table table-bordered text-center">
+      <thead class="table-light">
+        <tr>
+          <th>#</th>
+          <th>الاسم</th>
+          <th>التخصص</th>
+          <th>الجوال</th>
+          <th>البريد</th>
+          <th>المدينة</th>
+          <th>صورة البطاقة</th>
+          <th>خيارات</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- مثال بيانات -->
+        <tr>
+          <td>1</td>
+          <td>د. هدى السبيعي</td>
+          <td>النساء والولادة</td>
+          <td>0501234567</td>
+          <td>huda@example.com</td>
+          <td>نابلس</td>
+          <td><img src="https://png.pngtree.com/template/20191129/ourmid/pngtree-doctor-id-card-template-medical-identity-badge-image_335692.jpg" alt="بطاقة العمل" width="60"></td>
+          <td>
+            <a href="edit-user.html" class="btn btn-warning btn-sm"><button class="btn btn-sm btn-warning">✏️ تعديل</button></a>
+                    <a href="#" class="btn btn-danger btn-sm" onclick="return confirm('هل أنت متأكد من حذف هذا المستخدم؟')"><button class="btn btn-sm btn-danger">🗑️ حذف</button></a>
+          </td>
+        </tr>
+        <tr>
+                <td>2</td>
+                <td>د. أحمد محمود</td>
+                <td>طبيب أطفال</td>
+                <td>0599123456</td>
+                <td>ahmed@example.com</td>
+                <td>طوباس</td>
+                <td><img src="https://png.pngtree.com/template/20191129/ourmid/pngtree-doctor-id-card-template-medical-identity-badge-image_335692.jpg" alt="أحمد محمود" class="user-img" width="60"></td>
+                <td>
+                    <a href="edit-user.html" class="btn btn-warning btn-sm"><button class="btn btn-sm btn-warning">✏️ تعديل</button></a>
+                    <a href="#" class="btn btn-danger btn-sm" onclick="return confirm('هل أنت متأكد من حذف هذا المستخدم؟')"><button class="btn btn-sm btn-danger">🗑️ حذف</button></a>
+                </td>
+            </tr>
+
+        <!-- المزيد من الأطباء -->
+      </tbody>
+    </table>
+  </div>
+</body>
+</html>
