@@ -4,12 +4,9 @@
   <meta charset="UTF-8">
   <title>حجز موعد عند الطبيب</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.rtl.min.css" rel="stylesheet">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.rtl.min.css" rel="stylesheet">
-  <link href="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.8/index.global.min.css" rel="stylesheet">
-  <!-- Bootstrap RTL -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.rtl.min.css" rel="stylesheet">
   <link rel="stylesheet" href="../src/app.css">
-  <link rel="shortcut icon" href="../../../Assets/images/HalfTranLogo.png"></head>
+  <link rel="shortcut icon" href="../../../Assets/images/HalfTranLogo.png">
+</head>
 <body class="container mt-5">
   <h2 class="mb-4 text-center">➕ حجز موعد جديد عند الطبيب</h2>
 
@@ -22,6 +19,24 @@
         <option value="" disabled selected>-- اختر التخصص --</option>
         <option value="النساء والولادة">النساء والولادة</option>
         <option value="الأطفال">الأطفال</option>
+      </select>
+    </div>
+
+    <!-- اختيار المدينة -->
+    <div class="mb-3">
+      <label for="city" class="form-label">اختر المدينة</label>
+      <select class="form-select" id="city" name="city" required>
+        <option value="" disabled selected>-- اختر المدينة --</option>
+        <option value="رام الله والبيرة">رام الله والبيرة</option>
+        <option value="الخليل">الخليل</option>
+        <option value="نابلس">نابلس</option>
+        <option value="طولكرم">طولكرم</option>
+        <option value="بيت لحم">بيت لحم</option>
+        <option value="جنين">جنين</option>
+        <option value="القدس">القدس</option>
+        <option value="غزة">غزة</option>
+        <option value="أريحا">أريحا</option>
+        <option value="طوباس">طوباس</option>
       </select>
     </div>
 
@@ -69,28 +84,55 @@
     </div>
   </form>
 
-  <!-- JavaScript لتحديث قائمة الأطباء حسب التخصص -->
+  <!-- JavaScript لتحديث قائمة الأطباء حسب التخصص والمدينة -->
   <script>
     const doctorOptions = {
-      "النساء والولادة": ["د. هدى السبيعي", "د. نجلاء العتيبي"],
-      "الأطفال": ["د. عبدالله الحربي", "د. منى القحطاني"]
+      "النساء والولادة": {
+        "رام الله والبيرة": ["د. هدى السبيعي", "د. نجلاء العتيبي"],
+        "الخليل": ["د. فاطمة الزهراني", "د. ريم النفيعي"],
+        "نابلس": ["د. سارة أبو عيشة", "د. منى حمدان"],
+        "طولكرم": ["د. ليلى شحادة", "د. هند قاسم"],
+        "بيت لحم": ["د. أميرة عابد", "د. رنا المصري"],
+        "جنين": ["د. سميحة النجار", "د. أحمد القاضي"],
+        "القدس": ["د. نور محمد", "د. هالة الجمل"],
+        "غزة": ["د. سعاد رمضان", "د. طارق أبو زيد"],
+        "أريحا": ["د. مريم أبو زيد", "د. فاطمة عبد الله"],
+        "طوباس": ["د. هالة مصطفى", "د. سعيد عرفات"]
+      },
+      "الأطفال": {
+        "رام الله والبيرة": ["د. عبدالله الحربي", "د. منى القحطاني"],
+        "الخليل": ["د. سامي المالكي", "د. ليلى الشمراني"],
+        "نابلس": ["د. حسن الجابري", "د. مروة شعلان"],
+        "طولكرم": ["د. علي الجمل", "د. جمانة الشامي"],
+        "بيت لحم": ["د. سارة الحاج", "د. محمد زيدان"],
+        "جنين": ["د. سمير عودة", "د. نادية أبو هلال"],
+        "القدس": ["د. عادل الكيلاني", "د. بسمة ناصر"],
+        "غزة": ["د. ياسر الزعبي", "د. آية الشرفا"],
+        "أريحا": ["د. عمر حمدان", "د. فاطمة قاسم"],
+        "طوباس": ["د. سامر شحادة", "د. ياسمين عوض"]
+      }
     };
 
     const specialtySelect = document.getElementById("specialty");
+    const citySelect = document.getElementById("city");
     const doctorSelect = document.getElementById("doctor");
 
-    specialtySelect.addEventListener("change", function () {
-      const selectedSpecialty = this.value;
+    function updateDoctors() {
+      const specialty = specialtySelect.value;
+      const city = citySelect.value;
       doctorSelect.innerHTML = `<option value="" disabled selected>-- اختر الطبيب --</option>`;
-      if (doctorOptions[selectedSpecialty]) {
-        doctorOptions[selectedSpecialty].forEach(doctor => {
+      if (specialty && city && doctorOptions[specialty] && doctorOptions[specialty][city]) {
+        doctorOptions[specialty][city].forEach(doctor => {
           const option = document.createElement("option");
           option.value = doctor;
           option.textContent = doctor;
           doctorSelect.appendChild(option);
         });
       }
-    });
+    }
+
+    specialtySelect.addEventListener("change", updateDoctors);
+    citySelect.addEventListener("change", updateDoctors);
   </script>
 </body>
 </html>
