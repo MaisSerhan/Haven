@@ -1,7 +1,7 @@
 @import url(../../../Assets/styles/styles.css);
-@import url(../../../Assets/styles/navbar.css);
 body {
 font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+background-color: var(--pink-light);
 margin: 0;
 color: var(--text-color);
 line-height: 1.6;
