@@ -82,7 +82,7 @@
             
             <div class="input-box inline-flex me-5 me-sm-1" id="monthBox" style="display: none;">
                 <label for="month">حساب الحمل</label>
-                <label for="last-period-date">تاريخ آخر دورة شهرية</label>
+                <label for="last-period-date" id="period-label">تاريخ آخر دورة شهرية</label>
                 <input type="date" class=" mb-3" id="last-period-date" placeholder="تاريخ آخر دورة شهرية">
                 <select id="month" name="month">
                     <option value="">-- اختر الشهر الحمل--</option>
@@ -112,5 +112,19 @@
     </div>
     <!-- Code injected by live-server -->
     <script src="./src/login.js"></script>
+    <script>
+    document.getElementById('role').addEventListener('change', function () {
+        const role = this.value;
+        const label = document.getElementById('period-label');
+
+        if (role === 'أب') {
+            label.textContent = 'تاريخ آخر دورة شهرية لزوجتك';
+        } else if (role === 'أم') {
+            label.textContent = 'تاريخ آخر دورة شهرية لكِ';
+        } else {
+            label.textContent = 'تاريخ آخر دورة شهرية';
+        }
+    });
+    </script>
 </body>
 </html>
