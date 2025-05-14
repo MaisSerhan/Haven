@@ -42,6 +42,15 @@
                 <input type="password" id="confirm-password" placeholder="أكد كلمة المرور" required>
                 <button class="toggle-password" onclick="togglePassword('confirm-password', this)"><i class="fa fa-eye" style="color: #ff3f7e;"></i></button>
             </div>
+            <!-- اختيار النوع (أب / أم) -->
+            <div class="input-box inline-flex me-5 me-sm-1 mt-2">
+                <label for="role">اختر دورك</label>
+                <select id="role" name="role" required>
+                    <option value="">-- اختر دورك --</option>
+                    <option value="أم">أم</option>
+                    <option value="أب">أب</option>
+                </select>
+            </div>
             <!-- اختيار المدينة -->
             <span class="input-box inline-flex">
                 <label for="city">اختر مدينتك</label>
