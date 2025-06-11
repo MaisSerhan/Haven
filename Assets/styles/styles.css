@@ -2,11 +2,11 @@
 :root {
     --prim-col: #FF0057; /* الزهري الرئيسي */
     --sec-col: #ff009d; /* الزهري الفرعي */
-    --a-col: #ff82ac; 
+    --a-col: #9B3852; 
     --background: #FEDDF7;
     --prim-backg-col: #ffd3e4; /* الخلفية الاقوى */
     --sec-backg-col: rgba(255, 255, 255, 0.7); /* الخلفية الخفيفة */
-    --brownpink: #9B3852;
+    --brownpink: #7a2744;
     --move: #630565;
     --red-but: #FF0057;
     --h-red-but: #d9044f;
