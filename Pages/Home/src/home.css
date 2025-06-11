@@ -44,6 +44,7 @@ article{
 }
 #ho{
     color: #d8004d !important;
+    background-color: #ffe6f0;
 }
 @media (max-width: 770px) {
   #blog .carousel-item img {
