@@ -43,8 +43,10 @@ article{
   padding-top: 30px;
 }
 #ho{
-    color: #d8004d !important;
-    background-color: #ffe6f0;
+   /* color: #d8004d !important;
+    background-color: #ffe6f0;*/
+    color: #a10036 !important;
+    background-color: #ffcfe7;
 }
 @media (max-width: 770px) {
   #blog .carousel-item img {
