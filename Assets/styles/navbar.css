@@ -122,7 +122,9 @@ nav a{
   background-color: var(--a-col);
 }
 
-
+li{
+    font-width: bold !important;
+}
 @media (max-width: 1150px) {
     .auth-dropdown-content {
     }
