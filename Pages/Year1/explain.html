@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>كيف يعمل - مصنف بكاء الطفل</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.rtl.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="shortcut icon" href="https://github.com/MaisSerhan/Haven/blob/main/Assets/images/HalfTranLogo.png?raw=true">
+</head>
+<body style="background-color: #fddcff;">
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container">
+            <a class="navbar-brand" href="./">
+                <img src="https://github.com/MaisSerhan/Haven/blob/main/Assets/images/HalfTranLogo.png?raw=true" width="50">
+                مصنف بكاء الطفل
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="http://localhost:3000/">الصفحة الرئيسية</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="./">جرّب مصنف بكاء الطفل</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container mt-4">
+        <div class="row justify-content-center">
+            <div class="col-lg-10">
+                <div class="card shadow-sm mb-5">
+                    <div class="card-body">
+                        <h1 class="card-title">كيف يعمل مصنف بكاء الطفل؟</h1>
+                        
+                        <div class="mt-4">
+                            <h3>العلم وراء بكاء الأطفال</h3>
+                            <p>
+                                يُعبر الأطفال عن احتياجاتهم من خلال أنواع مختلفة من البكاء. وقد أظهرت الأبحاث أن هذه
+                                البكاءات تمتلك أنماطاً صوتية مميزة يمكن التعرف عليها وتصنيفها. تم تدريب نظام الذكاء
+                                الاصطناعي الخاص بنا على التعرف على هذه الأنماط وربطها باحتياجات مختلفة.
+                            </p>
+                        </div>
+                        
+                        <div class="row mt-5">
+                            <div class="col-md-6">
+                                <h3>تقنيتنا</h3>
+                                <div class="technology-step mb-4">
+                                    <div class="step-number">1</div>
+                                    <h5>المعالجة المسبقة للصوت</h5>
+                                    <p>نقوم باستخلاص الموجة الصوتية من الملف الصوتي أو التسجيل وتحضيره للتحليل.</p>
+                                </div>
+                                
+                                <div class="technology-step mb-4">
+                                    <div class="step-number">2</div>
+                                    <h5>استخلاص الميزات</h5>
+                                    <p>نُحلل الصوت لاستخلاص ميزات رئيسية مثل:</p>
+                                    <ul>
+                                        <li>MFCCs (معاملات السِبْتِرُوم الترددي)</li>
+                                        <li>المتوسط الطيفي</li>
+                                        <li>معدل عبور الصفر</li>
+                                        <li>الخصائص الكرومية</li>
+                                    </ul>
+                                </div>
+                                
+                                <div class="technology-step">
+                                    <div class="step-number">3</div>
+                                    <h5>التصنيف</h5>
+                                    <p>يقوم نموذج التعلم الآلي بتحليل هذه الميزات وتصنيف البكاء إلى واحدة من خمس فئات.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="col-md-6">
+                                <h3>فئات البكاء</h3>
+                                <div class="accordion" id="cryAccordion">
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header">
+                                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseHungry">
+                                                <i class="fas fa-utensils me-2 text-primary"></i> الجوع
+                                            </button>
+                                        </h2>
+                                        <div id="collapseHungry" class="accordion-collapse collapse show" data-bs-parent="#cryAccordion">
+                                            <div class="accordion-body">
+                                                بكاء الجوع يكون إيقاعياً ومتكرراً. يبدأ عادة بهدوء ويزداد في الشدة.
+                                                غالبًا ما يتضمن أصوات "نه، نه" وقد يصاحبه حركات مص أو بحث عن الحلمة.
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header">
+                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTired">
+                                                <i class="fas fa-bed me-2 text-primary"></i> التعب
+                                            </button>
+                                        </h2>
+                                        <div id="collapseTired" class="accordion-collapse collapse" data-bs-parent="#cryAccordion">
+                                            <div class="accordion-body">
+                                                بكاء التعب يكون أنفياً ومزعجاً. قد يصاحبه فرك العين أو التثاؤب.
+                                                وغالبًا ما يكون على شكل "أوه، أوه" ويزداد إذا لم يتم تهدئة الطفل للنوم.
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header">
+                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseBellyPain">
+                                                <i class="fas fa-stomach me-2 text-primary"></i> ألم البطن
+                                            </button>
+                                        </h2>
+                                        <div id="collapseBellyPain" class="accordion-collapse collapse" data-bs-parent="#cryAccordion">
+                                            <div class="accordion-body">
+                                                هذا النوع من البكاء يكون حاداً ومفاجئاً وعالياً.
+                                                غالبًا ما يسحب الطفل ساقيه نحو بطنه أو يشد قبضتيه أثناء البكاء.
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header">
+                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseBurping">
+                                                <i class="fas fa-wind me-2 text-primary"></i> الحاجة للتجشؤ
+                                            </button>
+                                        </h2>
+                                        <div id="collapseBurping" class="accordion-collapse collapse" data-bs-parent="#cryAccordion">
+                                            <div class="accordion-body">
+                                                بكاء التجشؤ يكون على شكل نوبات قصيرة من الانزعاج، ويتوقف بعد خروج الغازات.
+                                                عادةً ما يُصدر أصوات "إه، إه" مع حركات غير مريحة.
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header">
+                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseDiscomfort">
+                                                <i class="fas fa-frown me-2 text-primary"></i> الانزعاج
+                                            </button>
+                                        </h2>
+                                        <div id="collapseDiscomfort" class="accordion-collapse collapse" data-bs-parent="#cryAccordion">
+                                            <div class="accordion-body">
+                                                يشير هذا البكاء إلى الانزعاج الناتج عن حرارة، حفاضة مبللة، ملابس ضيقة، أو وضعية غير مريحة.
+                                                وقد يتوقف مؤقتاً إذا تم تشتيت انتباه الطفل، ثم يعود لاحقاً.
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="mt-5">
+                            <h3>بيانات التدريب</h3>
+                            <p>
+                                تم تدريب النموذج باستخدام قاعدة بيانات "Donate-a-Cry"، والتي تحتوي على آلاف
+                                تسجيلات البكاء المصنفة من قبل مختصين في رعاية الأطفال وأطباء أطفال.
+                                هذا التدريب الواسع مكّن النظام من التعرّف على أنماط مختلفة عبر بيئات تسجيل متعددة.
+                            </p>
+                        </div>
+                        
+                        <div class="mt-5 text-center">
+                            <h3>ملاحظة مهمة</h3>
+                            <div class="alert alert-info">
+                                <i class="fas fa-info-circle me-2"></i>
+                                هذا الأداة تساعدك على فهم سبب بكاء طفلك، لكنها ليست بديلاً عن استشارتك كوالد
+                                أو التواصل مع الأطباء عند الحاجة. اتبع دائماً حدسك وتواصل مع مختصين عند القلق.
+                            </div>
+                            
+                            <a href="index.html" class="btn btn-primary mt-3">
+                                <i class="fas fa-arrow-left me-2"></i> العودة إلى الأداة
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer mt-auto py-3 bg-light">
+        <div class="container text-center">
+            <span class="text-muted">© 2025 مصنف بكاء الطفل - لمساعدة الأهل على فهم أطفالهم</span>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
