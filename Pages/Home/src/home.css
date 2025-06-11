@@ -42,7 +42,9 @@ text-align: left; /* Align text to left */
 article{
   padding-top: 30px;
 }
-
+#ho{
+    color: #d8004d !important;
+}
 @media (max-width: 770px) {
   #blog .carousel-item img {
     margin-left: 0%;
