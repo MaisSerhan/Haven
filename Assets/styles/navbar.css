@@ -123,7 +123,7 @@ nav a{
 }
 
 li{
-    font-width: bold !important;
+    font-weight: bold !important;
 }
 @media (max-width: 1150px) {
     .auth-dropdown-content {
