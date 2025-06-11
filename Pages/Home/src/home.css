@@ -67,8 +67,3 @@ article{
     padding: 43px;
   }
 }
-@font-face {
-  font-family: 'Cairo';
-  src: url('Cairo.woff2') format('woff2');
-  font-display: swap;
-}
