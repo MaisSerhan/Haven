@@ -1,112 +1,183 @@
 <!DOCTYPE html>
-<html lang="ar">
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- رابط Bootstrap للحصول على التصميم الجاهز للبطاقات والأزرار -->
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.min.js"></script>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-  <link rel="shortcut icon" href="../../Assets/images/HalfTranLogo.png">
-  <title>اكتشاف سبب بكاء الطفل</title>
-  <style>
-    @import url(../../Assets/styles/button.css);
-    body {
-      font-family: Arial, sans-serif;
-      background-color: #f4f4f9;
-      direction: rtl;
-      padding: 20px;
-      height: 100vh;
-    }
-    .container {
-      max-width: 800px;
-      margin: auto;
-      background-color: white;
-      padding: 20px;
-      border-radius: 10px;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    }
-    h1 {
-      text-align: center;
-      color: #5e42a6;
-    }
-    .btn-record {
-      display: block;
-      width: 100%;
-      padding: 15px;
-      background-color: #ff5c8d;
-      color: white;
-      border: none;
-      border-radius: 8px;
-      font-size: 18px;
-      cursor: pointer;
-      margin-bottom: 20px;
-    }
-    .result-box {
-      padding: 20px;
-      background-color: #eef1f4;
-      border-radius: 8px;
-      margin-bottom: 20px;
-      text-align: center;
-    }
-    .result-text {
-      font-size: 18px;
-      color: #333;
-    }
-    .advice {
-      padding: 10px;
-      background-color: #fff5e6;
-      border-radius: 8px;
-      text-align: center;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Baby Cry Classifier</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="shortcut icon" href="https://github.com/MaisSerhan/Haven/blob/main/Assets/images/HalfTranLogo.png?raw=true">
 </head>
-<body class="d-flex flex-column">
+<body style="background-color: #fddcff;">
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container">
+            <a class="navbar-brand" href="">
+                <img src="https://github.com/MaisSerhan/Haven/blob/main/Assets/images/HalfTranLogo.png?raw=true" width=50> Baby Cry Classifier
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="http://localhost:3000/">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./explain">How It Works</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
 
-  <div class="container align-middle">
-    <h1>اكتشف سبب بكاء طفلك</h1>
-    <button class="btn-record" onclick="startRecording()">ابدأ التسجيل</button>
+    <div class="container mt-4">
+        <div class="row justify-content-center">
+            <div class="col-lg-10">
+                <div class="hero-section text-center mb-5">
+                    <h1 class="display-4">Decode Your Baby's Cries</h1>
+                    <p class="lead">Our AI model analyzes baby cries to help you understand what your baby needs.</p>
+                </div>
 
-    <div class="result-box">
-      <p class="result-text" id="resultText">النتيجة ستظهر هنا بعد التحليل</p>
+                <div class="row mb-5">
+                    <div class="col-md-6 mb-4">
+                        <div class="card shadow-sm h-100">
+                            <div class="card-body text-center">
+                                <h3><i class="fas fa-upload text-primary"></i> Upload Audio</h3>
+                                <p>Upload a recording of your baby's cry</p>
+                                <form id="uploadForm" enctype="multipart/form-data">
+                                    <div class="mb-3">
+                                        <input type="file" class="form-control" id="audioFile" name="file" accept="audio/*">
+                                    </div>
+                                    <button type="submit" class="btn btn-primary" id="uploadBtn">
+                                        <i class="fas fa-check"></i> Analyze
+                                    </button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-4">
+                        <div class="card shadow-sm h-100">
+                            <div class="card-body text-center">
+                                <h3><i class="fas fa-microphone text-primary"></i> Live Recording</h3>
+                                <p>Record your baby's cry directly</p>
+                                <div class="d-grid gap-2">
+                                    <button id="recordButton" class="btn btn-outline-primary">
+                                        <i class="fas fa-microphone"></i> Start Recording
+                                    </button>
+                                    <div id="recordingStatus" class="mt-2 d-none">
+                                        <div class="spinner-grow text-danger" role="status">
+                                            <span class="visually-hidden">Recording...</span>
+                                        </div>
+                                        <span class="ms-2">Recording...</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Results Section (Initially Hidden) -->
+                <div id="resultsSection" class="card shadow-sm mb-5 d-none">
+                    <div class="card-body">
+                        <h3 class="card-title text-center mb-4">Analysis Results</h3>
+                        
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="result-box text-center p-4 mb-4">
+                                    <h4>Prediction</h4>
+                                    <div class="prediction-result">
+                                        <i id="resultIcon" class="fas fa-3x mb-3"></i>
+                                        <h2 id="predictionResult" class="mb-2"></h2>
+                                        <p id="confidenceResult"></p>
+                                    </div>
+                                </div>
+                                
+                                <div class="chart-container">
+                                    <canvas id="probabilityChart"></canvas>
+                                </div>
+                            </div>
+                            
+                            <div class="col-md-6">
+                                <h4 class="text-center mb-3">Audio Analysis</h4>
+                                <div id="visualizationContainer" class="text-center">
+                                    <img id="audioVisualization" class="img-fluid" src="" alt="Audio visualization">
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="text-center mt-4">
+                            <button id="newAnalysisBtn" class="btn btn-outline-primary">
+                                <i class="fas fa-redo"></i> New Analysis
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="row mb-5">
+                    <div class="col-12">
+                        <div class="card shadow-sm">
+                            <div class="card-body">
+                                <h3 class="card-title">What Your Baby's Cries Mean</h3>
+                                <div class="row">
+                                    <div class="col-md-4 mb-3">
+                                        <div class="cry-type-card">
+                                            <i class="fas fa-utensils text-primary"></i>
+                                            <h5>Hungry Cry</h5>
+                                            <p>Rhythmic, repetitive sound that may increase in intensity.</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4 mb-3">
+                                        <div class="cry-type-card">
+                                            <i class="fas fa-bed text-primary"></i>
+                                            <h5>Tired Cry</h5>
+                                            <p>Nasal, whiny sound, often accompanied by eye rubbing or yawning.</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4 mb-3">
+                                        <div class="cry-type-card">
+                                            <i class="fas fa-stomach text-primary"></i>
+                                            <h5>Belly Pain</h5>
+                                            <p>Intense cry that starts suddenly, often with legs drawing up.</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 mb-3">
+                                        <div class="cry-type-card">
+                                            <i class="fas fa-wind text-primary"></i>
+                                            <h5>Burping</h5>
+                                            <p>Fussiness that resolves quickly after releasing gas.</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 mb-3">
+                                        <div class="cry-type-card">
+                                            <i class="fas fa-frown text-primary"></i>
+                                            <h5>Discomfort</h5>
+                                            <p>Variable intensity, may be related to temperature, diaper, or position.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 
-    <div class="advice" id="adviceBox">
-      <p>نصيحة حول كيفية التعامل مع البكاء</p>
-    </div>
+    <footer class="footer mt-auto py-3 bg-light">
+        <div class="container text-center">
+            <span class="text-muted">© 2025 Baby Cry Classifier - Helping Parents Understand Their Babies</span>
+        </div>
+    </footer>
 
-    <div class="history">
-      <h3>تاريخ الجلسات السابقة:</h3>
-      <ul id="historyList">
-        <!-- سيتم إضافة الجلسات السابقة هنا -->
-      </ul>
-    </div>
-  </div>
-  <div class="text-center mb-5 mt-5"><a href="oneYear.html" class="button-73">العودة للسنة الاولى</a></div>
-  <script>
-    // هذه الدالة ستتولى بدء عملية التسجيل
-    function startRecording() {
-      // من هنا يمكن ربط الكود لتحليل الصوت باستخدام الذكاء الاصطناعي
-      document.getElementById("resultText").textContent = "يتم الآن تحليل البكاء...";
-      document.getElementById("adviceBox").style.display = 'none';
-      
-      // محاكاة لتحليل الصوت - هنا يمكن استبدالها بنموذج الذكاء الاصطناعي
-      setTimeout(() => {
-        const result = "الطفل جائع"; // سيتم تحديد السبب هنا من قبل النموذج
-        const advice = "قدمي له الحليب أو الطعام.";
-        
-        document.getElementById("resultText").textContent = result;
-        document.getElementById("adviceBox").textContent = advice;
-        document.getElementById("adviceBox").style.display = 'block';
-
-        // إضافة التاريخ إلى الجلسات السابقة
-        const historyList = document.getElementById("historyList");
-        const listItem = document.createElement("li");
-        listItem.textContent = `بكاء الطفل بسبب: ${result}`;
-        historyList.appendChild(listItem);
-      }, 3000); // محاكاة تأخير التحليل (3 ثواني)
-    }
-  </script>
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="{{ url_for('static', filename='app.js') }}"></script>
 </body>
 </html>
+<!--https://github.com/jcdavid21/infant_cry_classification
+datd set : https://www.kaggle.com/datasets/warcoder/infant-cry-audio-corpus
+for test : https://github.com/gveres/donateacry-corpus/tree/master 
+python app.py
+-->
